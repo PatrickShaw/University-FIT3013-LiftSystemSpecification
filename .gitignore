@@ -1,0 +1,22 @@
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride

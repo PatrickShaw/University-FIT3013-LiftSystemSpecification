@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/LiftControlContext.bpo|org.eventb.core.poFile#LiftControlContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="BUTTON_STATE" org.eventb.core.type="ℙ(BUTTON_STATE)"/>
+<org.eventb.core.poIdentifier name="DOOR_STATE" org.eventb.core.type="ℙ(DOOR_STATE)"/>
+<org.eventb.core.poIdentifier name="FLOORS" org.eventb.core.type="ℙ(FLOORS)"/>
+<org.eventb.core.poIdentifier name="LIFT" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="LIFT_STATE" org.eventb.core.type="ℙ(LIFT_STATE)"/>
+<org.eventb.core.poIdentifier name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+<org.eventb.core.poIdentifier name="ACTIVE" org.eventb.core.type="BUTTON_STATE"/>
+<org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR_STATE"/>
+<org.eventb.core.poIdentifier name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.poIdentifier name="INACTIVE" org.eventb.core.type="BUTTON_STATE"/>
+<org.eventb.core.poIdentifier name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.poIdentifier name="OPENED" org.eventb.core.type="DOOR_STATE"/>
+<org.eventb.core.poIdentifier name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.poIdentifier name="RUNNING" org.eventb.core.type="LIFT_STATE"/>
+<org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="LIFT_STATE"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/LiftControlContext.bpo|org.eventb.core.poFile#LiftControlContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE})" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(VELOCITY)" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(BUTTON_STATE,{ACTIVE},{INACTIVE})" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(BUTTON_STATE)" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition(DOOR_STATE,{OPENED},{CLOSED})" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="finite(DOOR_STATE)" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="partition(LIFT_STATE,{RUNNING},{STOPPED})" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="finite(LIFT_STATE)" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="finite(LIFT)" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#?"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="finite(FLOORS)" org.eventb.core.source="/Assignment1/LiftControlContext.buc|org.eventb.core.contextFile#LiftControlContext|org.eventb.core.axiom#A"/>
+</org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

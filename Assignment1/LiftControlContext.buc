@@ -1,2 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3">
+<org.eventb.core.axiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(VELOCITY, {POSITIVE}, {NEGATIVE}, {IDLE})"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="VELOCITY"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="POSITIVE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="NEGATIVE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="IDLE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="ACTIVE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="INACTIVE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="OPENED"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.core.identifier="CLOSED"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="0" org.eventb.core.identifier="RUNNING"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="STOPPED"/>
+<org.eventb.core.carrierSet name="3" org.eventb.core.identifier="BUTTON_STATE"/>
+<org.eventb.core.carrierSet name="4" org.eventb.core.identifier="DOOR_STATE"/>
+<org.eventb.core.carrierSet name="5" org.eventb.core.identifier="LIFT_STATE"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(VELOCITY)"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(BUTTON_STATE, {ACTIVE}, {INACTIVE})"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(BUTTON_STATE)"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(DOOR_STATE, {OPENED}, {CLOSED})"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm6" org.eventb.core.predicate="finite(DOOR_STATE)"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="axm7" org.eventb.core.predicate="partition(LIFT_STATE, {RUNNING}, {STOPPED})"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm8" org.eventb.core.predicate="finite(LIFT_STATE)"/>
+<org.eventb.core.carrierSet name="&gt;" org.eventb.core.identifier="LIFT"/>
+<org.eventb.core.axiom name="?" org.eventb.core.label="axm9" org.eventb.core.predicate="finite(LIFT)"/>
+<org.eventb.core.carrierSet name="@" org.eventb.core.identifier="FLOORS"/>
+<org.eventb.core.axiom name="A" org.eventb.core.label="axm10" org.eventb.core.predicate="finite(FLOORS)"/>
+</org.eventb.core.contextFile>

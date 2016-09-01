@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.prFile version="1">
-<org.eventb.core.prProof name="inv1/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="FLOORS">
+<org.eventb.core.prProof name="inv1/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="FLOORS,LIFTS">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BUTTON_STATE,{ACTIVE},{INACTIVE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BUTTON_STATES,{ACTIVE},{INACTIVE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_STATE,{OPENED},{CLOSED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_STATES,{OPENED},{CLOSED}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATE,{RUNNING},{STOPPED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{RUNNING},{STOPPED}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14"/>
@@ -39,16 +39,16 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="building_floors" org.eventb.core.type="ℙ(ℙ(FLOORS))"/>
+<org.eventb.core.prIdent name="building_floors" org.eventb.core.type="ℙ(ℙ(LIFTS×FLOORS))"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬POSITIVE=NEGATIVE">
 <org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬OPENED=CLOSED">
-<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATE"/>
-<org.eventb.core.prIdent name="DOOR_STATE" org.eventb.core.type="ℙ(DOOR_STATE)"/>
-<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATE"/>
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬NEGATIVE=IDLE">
@@ -56,31 +56,31 @@
 <org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="DOOR_STATE={OPENED,CLOSED}">
-<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATE"/>
-<org.eventb.core.prIdent name="DOOR_STATE" org.eventb.core.type="ℙ(DOOR_STATE)"/>
-<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATE"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(LIFT_STATE,{RUNNING},{STOPPED})">
-<org.eventb.core.prIdent name="LIFT_STATE" org.eventb.core.type="ℙ(LIFT_STATE)"/>
-<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATE"/>
-<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATE"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀lift_floors⦂ℙ(FLOORS)·lift_floors∈building_floors⇒⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀lift_floors⦂ℙ(LIFTS×FLOORS)·lift_floors∈building_floors⇒ran(lift_floors)⊆FLOORS∧dom(lift_floors)⊆LIFTS"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬POSITIVE=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(BUTTON_STATE,{ACTIVE},{INACTIVE})">
-<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATE"/>
-<org.eventb.core.prIdent name="BUTTON_STATE" org.eventb.core.type="ℙ(BUTTON_STATE)"/>
-<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(LIFT_STATES,{RUNNING},{STOPPED})">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬ACTIVE=INACTIVE">
-<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATE"/>
-<org.eventb.core.prIdent name="BUTTON_STATE" org.eventb.core.type="ℙ(BUTTON_STATE)"/>
-<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATE"/>
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATES={RUNNING,STOPPED}">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE})">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
@@ -88,27 +88,27 @@
 <org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀lift_floors⦂ℙ(FLOORS)·lift_floors∈building_floors⇒lift_floors⊆FLOORS"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BUTTON_STATE={ACTIVE,INACTIVE}">
-<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATE"/>
-<org.eventb.core.prIdent name="BUTTON_STATE" org.eventb.core.type="ℙ(BUTTON_STATE)"/>
-<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATE"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬RUNNING=STOPPED">
-<org.eventb.core.prIdent name="LIFT_STATE" org.eventb.core.type="ℙ(LIFT_STATE)"/>
-<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATE"/>
-<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATE"/>
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="partition(DOOR_STATE,{OPENED},{CLOSED})">
-<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATE"/>
-<org.eventb.core.prIdent name="DOOR_STATE" org.eventb.core.type="ℙ(DOOR_STATE)"/>
-<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="DOOR_STATES={OPENED,CLOSED}">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATE={RUNNING,STOPPED}">
-<org.eventb.core.prIdent name="LIFT_STATE" org.eventb.core.type="ℙ(LIFT_STATE)"/>
-<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATE"/>
-<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BUTTON_STATES={ACTIVE,INACTIVE}">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀lift_floors⦂ℙ(LIFTS×FLOORS)·lift_floors∈building_floors⇒⊤∧⊤"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="VELOCITY={POSITIVE,NEGATIVE,IDLE}">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
 <org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
@@ -118,6 +118,368 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BUTTON_STATES,{ACTIVE},{INACTIVE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_STATES,{OPENED},{CLOSED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{RUNNING},{STOPPED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p12,p13"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬POSITIVE=NEGATIVE">
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬OPENED=CLOSED">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬NEGATIVE=IDLE">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="building_lifts⊆LIFTS">
+<org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
+<org.eventb.core.prIdent name="building_lifts" org.eventb.core.type="ℙ(LIFTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀lift_floors⦂ℙ(LIFTS×FLOORS)·lift_floors∈building_floors⇒ran(lift_floors)⊆FLOORS∧dom(lift_floors)⊆LIFTS">
+<org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(FLOORS)"/>
+<org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
+<org.eventb.core.prIdent name="building_floors" org.eventb.core.type="ℙ(ℙ(LIFTS×FLOORS))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬POSITIVE=IDLE">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀lift_buttons⦂ℙ(BUTTON_STATES)·lift_buttons∈building_buttons⇒⊤">
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="building_buttons" org.eventb.core.type="ℙ(ℙ(BUTTON_STATES))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀lift_buttons⦂ℙ(BUTTON_STATES)·lift_buttons∈building_buttons⇒lift_buttons⊆BUTTON_STATES">
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="building_buttons" org.eventb.core.type="ℙ(ℙ(BUTTON_STATES))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(LIFT_STATES,{RUNNING},{STOPPED})">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬ACTIVE=INACTIVE">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="LIFT_STATES={RUNNING,STOPPED}">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE})">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬RUNNING=STOPPED">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="DOOR_STATES={OPENED,CLOSED}">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="BUTTON_STATES={ACTIVE,INACTIVE}">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀lift_floors⦂ℙ(LIFTS×FLOORS)·lift_floors∈building_floors⇒⊤∧⊤">
+<org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(FLOORS)"/>
+<org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
+<org.eventb.core.prIdent name="building_floors" org.eventb.core.type="ℙ(ℙ(LIFTS×FLOORS))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VELOCITY={POSITIVE,NEGATIVE,IDLE}">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BUTTON_STATES">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BUTTON_STATES,{ACTIVE},{INACTIVE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_STATES,{OPENED},{CLOSED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{RUNNING},{STOPPED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p16" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="building_buttons'" org.eventb.core.type="ℙ(ℙ(BUTTON_STATES))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬POSITIVE=NEGATIVE">
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬OPENED=CLOSED">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬NEGATIVE=IDLE">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀lift_buttons⦂ℙ(BUTTON_STATES)·lift_buttons∈building_buttons'⇒lift_buttons⊆BUTTON_STATES"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬POSITIVE=IDLE">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(LIFT_STATES,{RUNNING},{STOPPED})">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬ACTIVE=INACTIVE">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATES={RUNNING,STOPPED}">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE})">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬RUNNING=STOPPED">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="DOOR_STATES={OPENED,CLOSED}">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="BUTTON_STATES={ACTIVE,INACTIVE}">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀lift_buttons⦂ℙ(BUTTON_STATES)·lift_buttons∈building_buttons'⇒⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="VELOCITY={POSITIVE,NEGATIVE,IDLE}">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(BUTTON_STATES,{ACTIVE},{INACTIVE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOOR_STATES,{OPENED},{CLOSED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{RUNNING},{STOPPED}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p12,p13"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬POSITIVE=NEGATIVE">
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬OPENED=CLOSED">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬NEGATIVE=IDLE">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬POSITIVE=IDLE">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(LIFT_STATES,{RUNNING},{STOPPED})">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬ACTIVE=INACTIVE">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="LIFT_STATES={RUNNING,STOPPED}">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(VELOCITY,{POSITIVE},{NEGATIVE},{IDLE})">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬RUNNING=STOPPED">
+<org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="DOOR_STATES={OPENED,CLOSED}">
+<org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.prIdent name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="BUTTON_STATES={ACTIVE,INACTIVE}">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
+<org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="VELOCITY={POSITIVE,NEGATIVE,IDLE}">
+<org.eventb.core.prIdent name="IDLE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="NEGATIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="POSITIVE" org.eventb.core.type="VELOCITY"/>
+<org.eventb.core.prIdent name="VELOCITY" org.eventb.core.type="ℙ(VELOCITY)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

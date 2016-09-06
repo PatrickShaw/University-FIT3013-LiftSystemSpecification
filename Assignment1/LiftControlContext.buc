@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase" version="3">
-<org.eventb.core.axiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(VELOCITY, {POSITIVE}, {NEGATIVE}, {IDLE})"/>
-<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="VELOCITY"/>
+<org.eventb.core.axiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(DIRECTION, {POSITIVE}, {NEGATIVE}, {IDLE})"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="DIRECTION"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="POSITIVE"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="NEGATIVE"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="+" org.eventb.core.identifier="IDLE"/>
@@ -14,7 +14,7 @@
 <org.eventb.core.carrierSet name="3" org.eventb.core.identifier="BUTTON_STATES"/>
 <org.eventb.core.carrierSet name="4" org.eventb.core.identifier="DOOR_STATES"/>
 <org.eventb.core.carrierSet name="5" org.eventb.core.identifier="LIFT_STATES"/>
-<org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(VELOCITY)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(DIRECTION)" org.eventb.core.theorem="true"/>
 <org.eventb.core.axiom name="7" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(BUTTON_STATES, {ACTIVE}, {INACTIVE})"/>
 <org.eventb.core.axiom name="8" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(BUTTON_STATES)"/>
 <org.eventb.core.axiom name="9" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(DOOR_STATES, {OPENED}, {CLOSED})"/>
@@ -27,4 +27,6 @@
 <org.eventb.core.axiom name="A" org.eventb.core.label="axm10" org.eventb.core.predicate="finite(FLOORS)"/>
 <org.eventb.core.carrierSet name="B" org.eventb.core.comment="Which floor the lift is currently on" org.eventb.core.identifier="INDICATOR_STATES"/>
 <org.eventb.core.axiom name="C" org.eventb.core.label="axm11" org.eventb.core.predicate="finite(INDICATOR_STATES)"/>
+<org.eventb.core.carrierSet name="D" org.eventb.core.identifier="BUTTONS"/>
+<org.eventb.core.axiom name="E" org.eventb.core.label="axm12" org.eventb.core.predicate="finite(BUTTONS)"/>
 </org.eventb.core.contextFile>

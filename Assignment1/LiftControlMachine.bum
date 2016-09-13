@@ -1,30 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="lift_current_positions ≔ FLOORS → {0}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="lift_directions ≔ LIFTS → {IDLE}" org.eventb.core.label="act4"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="lift_target_positions ≔ ∅" org.eventb.core.label="act2"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="request_pool ≔ ∅" org.eventb.core.label="act3"/>
-</org.eventb.core.event>
-<org.eventb.core.seesContext name="-" org.eventb.core.target="LiftControlContext"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="8" org.eventb.core.identifier="lift_current_positions"/>
-<org.eventb.core.invariant name="9" org.eventb.core.comment="(Patrick told me to keep this here) lift's may not map to a floor if they're in motion" org.eventb.core.label="inv3" org.eventb.core.predicate="lift_current_positions ∈ LIFTS → FLOORS"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=":" org.eventb.core.identifier="lift_target_positions"/>
-<org.eventb.core.invariant name=";" org.eventb.core.comment="Lifts can have multiple targets, or none at all (hence partial relation)" org.eventb.core.label="inv4" org.eventb.core.predicate="lift_target_positions ∈ LIFTS ↔ FLOORS"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="=" org.eventb.core.identifier="lift_directions"/>
-<org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv5" org.eventb.core.predicate="lift_directions ∈ LIFTS → DIRECTION"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="?" org.eventb.core.identifier="request_pool"/>
-<org.eventb.core.invariant name="@" org.eventb.core.comment="When somebody calls a lift on a floor, add to queue and note direction" org.eventb.core.label="inv6" org.eventb.core.predicate="request_pool ∈ FLOORS ↔ DIRECTION"/>
-<org.eventb.core.invariant name="A" org.eventb.core.label="inv7" org.eventb.core.predicate="lift_target_positions = ∅ ⇒ (∀lift·lift∈lifts ⇒ lift_directions(lift) = IDLE)"/>
-<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="assign_request_to_lift">
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="lift ∈ lifts"/>
-<org.eventb.core.parameter name="(" org.eventb.core.identifier="lift"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_directions(lift) = IDLE"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="lift_target_positions(lift) ≔ floor" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="+" org.eventb.core.assignment="request_pool ≔ request_pool ∖ {floor ↦ direction}" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="card(request_pool) &gt; 0"/>
-<org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="floor ↦ direction ∈ request_pool"/>
-<org.eventb.core.parameter name="/" org.eventb.core.identifier="floor"/>
-<org.eventb.core.parameter name="0" org.eventb.core.identifier="direction"/>
-</org.eventb.core.event>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
 </org.eventb.core.machineFile>

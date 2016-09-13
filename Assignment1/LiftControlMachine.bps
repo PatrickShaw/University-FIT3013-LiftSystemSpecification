@@ -1,15 +1,2 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.psFile>
-<org.eventb.core.psStatus name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="32" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="request_lift/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="assign_request_to_lift/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="assign_request_to_lift/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="assign_request_to_lift/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="assign_request_to_lift/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="assign_request_to_lift/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
-</org.eventb.core.psFile>
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eventb.core.psFile/>

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="lift_current_positions ≔ floors → {0}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="lift_directions ≔ lifts → {IDLE}" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="lifts ≔ ∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="floors ≔ {0}" org.eventb.core.comment="Currently have to have at least 1 floor to start off with due to invariants" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="lift_target_positions ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="request_pool ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
 <org.eventb.core.seesContext name="-" org.eventb.core.target="LiftControlContext"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="lifts"/>
 <org.eventb.core.invariant name="5" org.eventb.core.label="inv1" org.eventb.core.predicate="lifts ⊆ LIFTS"/>
@@ -31,5 +38,12 @@
 <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="floor ↦ direction ∈ request_pool"/>
 <org.eventb.core.parameter name="/" org.eventb.core.identifier="floor"/>
 <org.eventb.core.parameter name="0" org.eventb.core.identifier="direction"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add_lift">
+<org.eventb.core.action name="'" org.eventb.core.assignment="lifts ≔ lifts ⋃ {new_lift}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="new_lift ∉ lifts" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="new_lift ∈ LIFTS" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="lifts_current_positions ≔ lifts_current_position" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

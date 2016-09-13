@@ -29,4 +29,5 @@
 <org.eventb.core.axiom name="C" org.eventb.core.label="axm11" org.eventb.core.predicate="finite(INDICATOR_STATES)"/>
 <org.eventb.core.carrierSet name="D" org.eventb.core.identifier="BUTTONS"/>
 <org.eventb.core.axiom name="E" org.eventb.core.label="axm12" org.eventb.core.predicate="finite(BUTTONS)"/>
+<org.eventb.core.axiom name="F" org.eventb.core.label="axm13" org.eventb.core.predicate="FLOORS ⊆ ℕ"/>
 </org.eventb.core.contextFile>

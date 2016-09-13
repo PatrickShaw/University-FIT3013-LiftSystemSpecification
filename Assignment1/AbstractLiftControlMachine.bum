@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="request_pool ≔ ∅" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="request_lift">
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="floor_direction ∈ FLOORS × DIRECTION"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="floor_direction"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="floor_direction ∉ request_pool"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="request_pool ≔ request_pool ∪ {floor_direction}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="evt2" org.eventb.core.target="LiftControlContext"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evt3" org.eventb.core.identifier="request_pool"/>
+<org.eventb.core.invariant name="evt4" org.eventb.core.label="inv1" org.eventb.core.predicate="request_pool ∈ FLOORS ↔ DIRECTION"/>
 </org.eventb.core.machineFile>

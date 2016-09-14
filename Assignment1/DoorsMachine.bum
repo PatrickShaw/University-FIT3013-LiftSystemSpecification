@@ -4,7 +4,7 @@
 <org.eventb.core.action name="'" org.eventb.core.assignment="lift_door_states ≔ LIFTS × {CLOSED}" org.eventb.core.label="act4"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="floor_doors_states ≔ LIFTS × {FLOORS × {CLOSED}}" org.eventb.core.label="act5"/>
 </org.eventb.core.event>
-<org.eventb.core.seesContext name=")" org.eventb.core.target="LiftDoorsContext"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="DoorsContext"/>
 <org.eventb.core.refinesMachine name="*" org.eventb.core.target="BaseLiftMachine"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="0" org.eventb.core.identifier="lift_states"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="2" org.eventb.core.identifier="lift_directions"/>

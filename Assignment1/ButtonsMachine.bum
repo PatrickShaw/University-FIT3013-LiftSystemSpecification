@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="lift_buttons_states ≔ LIFTS × {FLOORS × {INACTIVE}}" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="floor_buttons_states ≔ FLOORS × {LIFT_DIRECTIONS × {INACTIVE}}" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="lift_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="lift_directions"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="lift_floors"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.core.identifier="lift_door_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="0" org.eventb.core.identifier="floor_doors_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="lift_buttons_states"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="lift_buttons_states ∈ LIFTS → (FLOORS → BUTTON_STATES)"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ButtonsContext"/>
+<org.eventb.core.refinesMachine name="+" org.eventb.core.target="DoorsMachine"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="floor_buttons_states"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv2" org.eventb.core.predicate="floor_buttons_states ∈ FLOORS → (LIFT_DIRECTIONS → BUTTON_STATES)"/>
+</org.eventb.core.machineFile>

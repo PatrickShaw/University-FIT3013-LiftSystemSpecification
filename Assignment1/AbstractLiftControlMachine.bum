@@ -12,9 +12,9 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=":" org.eventb.core.identifier="lift_target_positions"/>
 <org.eventb.core.invariant name=";" org.eventb.core.comment="Lifts can have multiple targets, or none at all (hence partial relation)" org.eventb.core.label="inv4" org.eventb.core.predicate="lift_target_positions ∈ LIFTS ↔ FLOORS"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="=" org.eventb.core.identifier="lift_directions"/>
-<org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv5" org.eventb.core.predicate="lift_directions ∈ LIFTS → DIRECTION"/>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv5" org.eventb.core.predicate="lift_directions ∈ LIFTS → DIRECTIONS"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="?" org.eventb.core.identifier="request_pool"/>
-<org.eventb.core.invariant name="@" org.eventb.core.comment="When somebody calls a lift on a floor, add to queue and note direction" org.eventb.core.label="inv6" org.eventb.core.predicate="request_pool ∈ FLOORS ↔ DIRECTION"/>
+<org.eventb.core.invariant name="@" org.eventb.core.comment="When somebody calls a lift on a floor, add to queue and note direction" org.eventb.core.label="inv6" org.eventb.core.predicate="request_pool ∈ FLOORS ↔ DIRECTIONS"/>
 <org.eventb.core.invariant name="A" org.eventb.core.label="inv7" org.eventb.core.predicate="lift_target_positions = ∅ ⇒ (∀lift·lift∈LIFTS ⇒ lift_directions(lift) = IDLE)"/>
 <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="assign_request_to_lift">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="lift ∈ LIFTS"/>
@@ -28,7 +28,10 @@
 <org.eventb.core.parameter name="0" org.eventb.core.identifier="direction"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label=""/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="E" org.eventb.core.identifier="floor_buttons"/>
-<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="F" org.eventb.core.identifier="lift_buttons"/>
-<org.eventb.core.invariant name="G" org.eventb.core.label="inv8" org.eventb.core.predicate="lift_b"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="E" org.eventb.core.comment="The buttons on each floor" org.eventb.core.identifier="floor_buttons"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="F" org.eventb.core.comment="The buttons on each lift" org.eventb.core.identifier="lift_buttons"/>
+<org.eventb.core.invariant name="G" org.eventb.core.label="inv8" org.eventb.core.predicate="lift_buttons ∈ LIFTS → FLOORS" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="H" org.eventb.core.label="inv9" org.eventb.core.predicate="floor_buttons ∈ FLOORS ↔ DIRECTIONS"/>
+<org.eventb.core.invariant name="I" org.eventb.core.label="inv10" org.eventb.core.predicate="NEGATIVE ∉ floor_buttons[{0}]"/>
+<org.eventb.core.invariant name="J" org.eventb.core.label="inv11" org.eventb.core.predicate="POSITIVE ∉ floor_buttons[{TOP_FLOOR}]"/>
 </org.eventb.core.machineFile>

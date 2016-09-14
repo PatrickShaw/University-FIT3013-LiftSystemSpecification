@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="13">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -71,6 +71,38 @@
 <org.eventb.core.poIdentifier name="lift_door_states'" org.eventb.core.type="ℙ(LIFTS×DOOR_STATES)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPfloor_buttons_statet" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTIDENTfloor_buttons_statet" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="select_floor_button/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTHYPfloor_buttons_stateu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_buttons_states)∧lift_buttons_states∈LIFTS ⇸ ℙ(ℤ × BUTTON_STATES)∧floor∈dom(lift_buttons_states(lift))∧lift_buttons_states(lift)∈ℤ ⇸ BUTTON_STATES" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTHYPfloor_buttons_stateu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="select_floor_button/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTALLHYPfloor_buttons_stateu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_buttons_states{lift ↦ lift_buttons_states(lift){floor ↦ ACTIVE}}∈LIFTS → (FLOORS → BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poSequent#select_floor_button\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="select_floor_button/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTALLHYPfloor_buttons_stateu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_buttons_states)∧lift_buttons_states∈LIFTS ⇸ ℙ(ℤ × BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.action#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTALLHYPfloor_buttons_stateu"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloor_buttons_stateu" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poIdentifier name="lift_buttons_states'" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×BUTTON_STATES))"/>
+<org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloor_buttons_stateu(" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTIDENTfloor_buttons_stateu" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor∈FLOORS" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloor_buttons_stateu" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTHYPfloor_buttons_stateu(" org.eventb.core.poStamp="13">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift_buttons_states(lift)(floor)≠ACTIVE" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_buttons_states∈LIFTS → (FLOORS → BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.invariant#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floor_buttons_states∈FLOORS → (LIFT_DIRECTIONS → BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.invariant#2"/>

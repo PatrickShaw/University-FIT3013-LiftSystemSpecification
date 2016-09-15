@@ -13,6 +13,24 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="floor_doors_states"/>
 <org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="lift_door_states ∈ LIFTS → DOOR_STATES"/>
 <org.eventb.core.invariant name="." org.eventb.core.comment="Each lift will have it's own dedicated door on each floor" org.eventb.core.label="inv2" org.eventb.core.predicate="floor_doors_states ∈ LIFTS → (FLOORS → DOOR_STATES)"/>
+<org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="start_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_lift_direction">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_lift_direction"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="open_lift_door">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="lift"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="lift_door_states(lift) = CLOSED"/>

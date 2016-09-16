@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="lift_request_pool ≔ ∅" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="floor_request_pool ≔ ∅" org.eventb.core.label="act9"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="SchedulingContext"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="ButtonsMachine"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="lift_request_pool"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="floor_request_pool"/>
+<org.eventb.core.invariant name="." org.eventb.core.comment="A lift maps to multiple target floors" org.eventb.core.label="inv2" org.eventb.core.predicate="lift_request_pool ∈ LIFTS ↔ FLOORS"/>
+<org.eventb.core.invariant name="+" org.eventb.core.comment="When somebody calls a lift on a floor, add to queue and note direction" org.eventb.core.label="inv1" org.eventb.core.predicate="floor_request_pool ∈ FLOORS ↔ LIFT_DIRECTIONS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.core.identifier="lift_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="0" org.eventb.core.identifier="lift_directions"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="lift_floors"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="2" org.eventb.core.identifier="lift_door_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="3" org.eventb.core.identifier="floor_doors_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="lift_buttons_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="5" org.eventb.core.identifier="floor_buttons_states"/>
+</org.eventb.core.machineFile>

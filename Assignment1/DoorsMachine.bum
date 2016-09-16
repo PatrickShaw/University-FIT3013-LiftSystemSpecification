@@ -54,5 +54,5 @@
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="floor_doors_states(lift)(lift_floors(lift)) = OPENED"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="floor_doors_states(lift) ≔ floor_doors_states(lift)  {lift_floors(lift) ↦ CLOSED}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="evt5" org.eventb.core.comment="If a floor door is open, then the associated lift's door must also be open" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x·floor_doors_states(x)(lift_floors(x)) = OPENED ⇒ lift_door_states(x) = OPENED"/>
+<org.eventb.core.invariant name="evt5" org.eventb.core.comment="If a floor door is open, then the associated lift's door must also be open" org.eventb.core.label="inv4" org.eventb.core.predicate="∀x·x ∈ LIFTS ∧ floor_doors_states(x)(lift_floors(x)) = OPENED ⇒ lift_door_states(x) = OPENED"/>
 </org.eventb.core.machineFile>

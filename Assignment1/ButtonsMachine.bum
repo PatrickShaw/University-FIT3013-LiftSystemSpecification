@@ -7,12 +7,44 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="," org.eventb.core.identifier="lift_states"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="lift_directions"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="lift_floors"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="6" org.eventb.core.identifier="lift_door_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="7" org.eventb.core.identifier="floor_doors_states"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="(" org.eventb.core.identifier="lift_buttons_states"/>
 <org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="lift_buttons_states ∈ LIFTS → (FLOORS → BUTTON_STATES)"/>
 <org.eventb.core.seesContext name="*" org.eventb.core.target="ButtonsContext"/>
-<org.eventb.core.refinesMachine name="+" org.eventb.core.target="BaseLiftMachine"/>
+<org.eventb.core.refinesMachine name="+" org.eventb.core.target="DoorsMachine"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="1" org.eventb.core.identifier="floor_buttons_states"/>
 <org.eventb.core.invariant name="2" org.eventb.core.label="inv2" org.eventb.core.predicate="floor_buttons_states ∈ FLOORS → (LIFT_DIRECTIONS → BUTTON_STATES)"/>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="start_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_lift_direction">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_lift_direction"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_lift_door">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_lift_door"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_lift_door">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_lift_door"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_floor_door">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_floor_door"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_floor_door">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_floor_door"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="select_floor_button">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="floor"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="lift_buttons_states(lift) ≔ lift_buttons_states(lift)  {floor ↦ ACTIVE}" org.eventb.core.label="act1"/>
@@ -28,14 +60,5 @@
 <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="direction ∈ LIFT_DIRECTIONS"/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="floor_buttons_states(floor)(direction) = INACTIVE"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="floor_buttons_states(floor) ≔ floor_buttons_states(floor)  {direction ↦ ACTIVE}" org.eventb.core.label="act1"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="move_lift">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="floor_buttons_states(lift_floors(lift)) ≔ floor_buttons_states(lift_floors(lift))  {lift_directions(lift) ↦ INACTIVE}" org.eventb.core.comment="Deactives floor button" org.eventb.core.label="act1"/>
-<org.eventb.core.parameter name="*" org.eventb.core.identifier="lift"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="lift ∈ LIFTS"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="floor_buttons_states(lift_floors(lift))(lift_directions(lift)) = ACTIVE"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="lift_buttons_states(lift) ≔ lift_buttons_states(lift)  {lift_floors(lift) ↦ INACTIVE}" org.eventb.core.comment="Deactives lift button" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="lift_buttons_states(lift)(lift_floors(lift)) = ACTIVE"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

@@ -35,7 +35,5 @@
 <org.eventb.core.scCarrierSet name="BUTTON_STATES" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
 <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="INACTIVE" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.constant#+" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.scInternalContext>
-<org.eventb.core.scAxiom name="BaseLiftContexu" org.eventb.core.label="axm2" org.eventb.core.predicate="LIFT_PRIORITIES=LIFTS ⤖ 1 ‥ card(LIFTS)" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="BaseLiftContexv" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(LIFT_PRIORITIES)" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
-<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" de.prob.units.unitPragmaAttribute="" name="LIFT_PRIORITIES" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.constant#(" org.eventb.core.type="ℙ(ℙ(LIFTS×ℤ))"/>
+<org.eventb.core.scAxiom name="BaseLiftContexu" org.eventb.core.label="axm1" org.eventb.core.predicate="⊤" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
 </org.eventb.core.scContextFile>

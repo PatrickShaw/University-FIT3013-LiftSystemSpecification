@@ -43,5 +43,6 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="lift"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="lift_directions(lift) ≔ {UP ↦ DOWN, DOWN ↦ UP}(lift_directions(lift))" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="lift ∈ LIFTS"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_states(lift) ≠ MOVING"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

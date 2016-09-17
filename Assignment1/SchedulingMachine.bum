@@ -28,6 +28,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="lift ∈ {x ∣ x ∈ LIFTS ∧&#13;&#10;(&#13;&#10;  lift_buttons_states(x)(lift_floors(x)) = ACTIVE ∨&#13;&#10;  floor_buttons_states(lift_floors(x))(lift_directions(x)) = ACTIVE ∨&#13;&#10;  (&#13;&#10;    ACTIVE ∉ ran(lift_buttons_states(x)) ∧&#13;&#10;    ACTIVE ∈ ran(floor_buttons_states(lift_floors(x)))&#13;&#10;  )&#13;&#10;)}"/>
 </org.eventb.core.event>
 <org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
@@ -47,16 +48,16 @@
 <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_floor_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_floor_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_floor_button">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_floor_button"/>
-</org.eventb.core.event>
 <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift_button"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_floor_button">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_floor_button"/>
-</org.eventb.core.event>
 <org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_lift_button"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_floor_button">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_floor_button"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_floor_button">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_floor_button"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

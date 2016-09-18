@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="indicators_next_lift_number≔INDICATORS × ∅" org.eventb.core.comment="All lifts are IDLE so there is no 'next lift number'" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="indicators_next_lift_direction≔INDICATORS × ∅" org.eventb.core.comment="All lifts are going anywhere so there is no 'next lift direction'" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="lift_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="lift_directions"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="lift_door_states"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv1" org.eventb.core.predicate="indicators_next_lift_number ∈ INDICATORS → LIFT_NUMBERS"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="start_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_lift_direction">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_lift_direction"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv2" org.eventb.core.predicate="indicators_next_lift_direction ∈ INDICATORS → LIFT_DIRECTIONS"/>
+<org.eventb.core.seesContext name="8" org.eventb.core.target="IndicatorContext"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="?" org.eventb.core.identifier="floor_doors_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="@" org.eventb.core.identifier="lift_buttons_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="&gt;" org.eventb.core.identifier="lift_current_floor"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="A" org.eventb.core.identifier="floor_buttons_states"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="indicators_next_lift_direction"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.comment="Represents what floor number the indicator is displaying for a particular lift on a paricular floor" org.eventb.core.identifier="indicators_next_lift_number"/>
+<org.eventb.core.refinesMachine name=":" org.eventb.core.target="SchedulingMachine"/>
+</org.eventb.core.machineFile>

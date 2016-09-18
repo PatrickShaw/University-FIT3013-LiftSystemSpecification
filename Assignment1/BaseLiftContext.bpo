@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="16">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
 <org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -12,7 +12,7 @@
 <org.eventb.core.poIdentifier name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="16">
+<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/BaseLiftContext.bpo|org.eventb.core.poFile#BaseLiftContext|org.eventb.core.poPredicateSet#HYP+"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(FLOORS)" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
@@ -25,7 +25,7 @@
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TOP_FLOOR∈ℕ1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#-"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/BaseLiftContext.bpo|org.eventb.core.poFile#BaseLiftContext|org.eventb.core.poPredicateSet#HYP+" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/BaseLiftContext.bpo|org.eventb.core.poFile#BaseLiftContext|org.eventb.core.poPredicateSet#HYP+" org.eventb.core.poStamp="4">
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

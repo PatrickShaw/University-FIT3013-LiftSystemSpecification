@@ -60,46 +60,34 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="LIFTS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9,p10,p11"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p9,p10,p11"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_DIRECTIONS,{UP},{DOWN}))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p12,p13"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p7,p5,p6,p4,p8,p9,p10,p11,p12,p13">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p6,p4,p5,p3,p7,p8,p9,p10">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="LIFTS × {IDLE}∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬MOVING=IDLE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 </org.eventb.core.prProof>
@@ -146,46 +134,34 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="LIFTS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9,p10,p11"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p9,p10,p11"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_DIRECTIONS,{UP},{DOWN}))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12,p13"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p12,p13"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p7,p5,p6,p4,p8,p9,p10,p11,p12,p13">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8,p9,p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p6,p4,p5,p3,p7,p8,p9,p10">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="LIFTS × {0}∈LIFTS → FLOORS"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬MOVING=IDLE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 </org.eventb.core.prProof>
@@ -276,23 +252,19 @@
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="activate_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
+<org.eventb.core.prProof name="activate_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_DIRECTIONS,{UP},{DOWN}))" org.eventb.core.prHyps="">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=IDLE" org.eventb.core.prHyps="p2">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p19"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p19"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=IDLE" org.eventb.core.prHyps="p9">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p21"/>
-<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p14,p16,p17"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11,p8,p4,p6,p3,p7,p5,p12,p9,p10,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p15,p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p12,p6,p8,p5,p9,p7,p10,p2,p3,p11,p13,p14,p15,p16,p17,p18,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -300,42 +272,34 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬MOVING=lift_states(lift)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,lift_states(lift)}"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states(lift)=IDLE"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift∈dom(lift_states)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬STOPPED=IDLE"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬STOPPED=lift_states(lift)"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬MOVING=lift_states(lift)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,lift_states(lift)}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=IDLE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="lift_states(lift)=IDLE"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift∈dom(lift_states)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬STOPPED=lift_states(lift)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift_states{lift ↦ STOPPED}∈LIFTS → LIFT_STATES"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
@@ -428,23 +392,19 @@
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="deactivate_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
+<org.eventb.core.prProof name="deactivate_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_DIRECTIONS,{UP},{DOWN}))" org.eventb.core.prHyps="">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=STOPPED" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p19"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p19"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=STOPPED" org.eventb.core.prHyps="p9">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p21"/>
-<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p14,p15,p17"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11,p8,p4,p6,p3,p7,p5,p12,p9,p10,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p14,p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p12,p6,p8,p5,p9,p7,p10,p1,p3,p11,p13,p14,p15,p16,p17,p18,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -452,43 +412,35 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬MOVING=lift_states(lift)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="LIFT_STATES={MOVING,lift_states(lift),IDLE}"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states(lift)=STOPPED"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift∈dom(lift_states)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬MOVING=lift_states(lift)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="LIFT_STATES={MOVING,lift_states(lift),IDLE}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=IDLE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="lift_states(lift)=STOPPED"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift∈dom(lift_states)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift_states{lift ↦ IDLE}∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬STOPPED=IDLE"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
@@ -580,23 +532,19 @@
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="start_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
+<org.eventb.core.prProof name="start_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_DIRECTIONS,{UP},{DOWN}))" org.eventb.core.prHyps="">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=STOPPED" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p19"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p19"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=STOPPED" org.eventb.core.prHyps="p9">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p21"/>
-<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p17" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p14,p15,p17"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11,p8,p4,p6,p3,p7,p5,p12,p9,p10,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p14,p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p12,p6,p8,p5,p9,p7,p10,p1,p3,p11,p13,p14,p15,p16,p17,p18,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -604,43 +552,35 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬MOVING=lift_states(lift)"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="LIFT_STATES={MOVING,lift_states(lift),IDLE}"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states(lift)=STOPPED"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift∈dom(lift_states)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬MOVING=lift_states(lift)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="LIFT_STATES={MOVING,lift_states(lift),IDLE}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=IDLE"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="lift_states(lift)=STOPPED"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift∈dom(lift_states)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift_states{lift ↦ MOVING}∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬STOPPED=IDLE"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
@@ -732,23 +672,19 @@
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="stop_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
+<org.eventb.core.prProof name="stop_lift/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(LIFT_DIRECTIONS,{UP},{DOWN}))" org.eventb.core.prHyps="">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14,p15,p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p10">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p19"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p19"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p12">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p20"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p21"/>
-<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p14,p15,p16"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p4,p6,p3,p7,p5,p11,p12,p9,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p14,p15"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p12,p5,p7,p4,p8,p6,p9,p10,p2,p11,p13,p14,p15,p16,p17,p18,p19">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -756,42 +692,34 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="LIFT_STATES={lift_states(lift),STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift∈dom(lift_states)"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬STOPPED=IDLE"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬lift_states(lift)=STOPPED"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬MOVING=IDLE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="LIFT_STATES={lift_states(lift),STOPPED,IDLE}"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="lift∈dom(lift_states)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬lift_states(lift)=STOPPED"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift_states{lift ↦ STOPPED}∈LIFTS → LIFT_STATES"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
@@ -896,13 +824,13 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p3">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p2">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p13"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p14"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p15"/>
 <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p5,p6,p7"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p2">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
@@ -917,14 +845,14 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p18">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p1"/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p19">
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p20">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p3">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p2">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p13"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p14"/>
@@ -935,7 +863,7 @@
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p23"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p24"/>
 <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p10,p11"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p1">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p3">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p16">
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
@@ -952,7 +880,7 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p25">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p3"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -969,8 +897,8 @@
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}">
 <org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
@@ -990,11 +918,12 @@
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="lift∈dom(lift_floors)"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="lift∈dom(lift_current_floor)"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬lift_states(lift)=STOPPED">
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
@@ -1004,39 +933,38 @@
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬UP=DOWN">
 <org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="lift_current_floor∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬MOVING=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_directions(lift)=UP⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_directions(lift)=UP⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ)"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬MOVING=STOPPED">
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬lift_states(lift)=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="lift_floors∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬STOPPED=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬lift_directions(lift)=DOWN">
 <org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="LIFTS"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="move_lift/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
@@ -1048,7 +976,7 @@
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11,p12"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p11,p12"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
@@ -1085,7 +1013,7 @@
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p28"/>
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p1">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p3">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p29">
 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p29" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p30">
@@ -1114,7 +1042,7 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p31">
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p31" org.eventb.core.prHyps="p3"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1133,17 +1061,23 @@
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}">
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="⊤∧⊤∧(lift_directions(lift)=DOWN⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="⊤∧⊤∧(lift_directions(lift)=DOWN⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})">
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="lift∈LIFTS"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift_directions(lift)=UP⇒⊥∧lift_current_floor∈LIFTS ⇸ ℤ">
+<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒lift_current_floor(lift)&lt;TOP_FLOOR">
+<org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="lift_directions(lift)=DOWN"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬lift_directions(lift)=UP">
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
@@ -1160,66 +1094,60 @@
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬⊥"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="lift∈dom(lift_floors)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_directions(lift)=DOWN⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="lift∈dom(lift_current_floor)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_directions(lift)=DOWN⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ)"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬lift_states(lift)=STOPPED">
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒lift_floors(lift)&lt;TOP_FLOOR">
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift_current_floor(lift)&lt;TOP_FLOOR">
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift_directions(lift)=UP⇒⊥∧lift_floors∈LIFTS ⇸ ℤ">
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬UP=DOWN">
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,lift_directions(lift)}">
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="lift_current_floor∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬MOVING=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift_floors(lift)&lt;TOP_FLOOR">
-<org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬MOVING=STOPPED">
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ">
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬lift_states(lift)=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p31" org.eventb.core.predicate="lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬STOPPED=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ">
+<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="LIFTS"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="move_lift/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="LIFTS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
@@ -1285,6 +1213,9 @@
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_current_floor∈LIFTS ⇸ ℤ">
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒⊤∧⊤">
 <org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -1307,9 +1238,6 @@
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift∈dom(lift_floors)">
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="lift_directions(lift)∈dom({UP ↦ 1,DOWN ↦ −1})">
 <org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -1319,14 +1247,8 @@
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬MOVING=STOPPED">
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ">
-<org.eventb.core.prIdent name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
-<org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_floors∈LIFTS ⇸ ℤ">
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift∈dom(lift_current_floor)">
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬lift_states(lift)=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
@@ -1339,16 +1261,22 @@
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬lift_states(lift)=STOPPED">
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ">
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ">
 <org.eventb.core.prIdent name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ">
+<org.eventb.core.prIdent name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
+<org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="move_lift/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
@@ -1360,7 +1288,7 @@
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p24,p25"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p15,p16">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p12,p13">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p26">
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p27">
@@ -1368,27 +1296,27 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="p31" org.eventb.core.prInfHyps="p33"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="p32" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="p31" org.eventb.core.prInfHyps="p33"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="p32" org.eventb.core.prInfHyps="p34"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p33"/>
 <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p34"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p17">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p15">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p36"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p20,p21,p22"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p13">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p14">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
@@ -1411,29 +1339,29 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p40">
-<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="p14"/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p41">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p17">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p15">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p36"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p20,p21,p22"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="p14,p9,p4,p6,p3,p7,p5,p13,p17,p12,p18,p8,p15,p16,p10,p11,p19,p20,p21,p22,p23,p24,p25,p35,p36,p37">
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="p11,p8,p4,p6,p3,p7,p5,p14,p15,p10,p16,p18,p12,p13,p19,p9,p17,p20,p21,p22,p23,p24,p25,p35,p36,p37">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p42">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p17">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with lift_states(lift)=MOVING" org.eventb.core.prHyps="p15">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p36"/>
 <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p20,p21,p22"/>
-<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p14,p9,p4,p6,p3,p7,p5,p13,p17,p12,p18,p8,p15,p16,p10,p11,p19,p20,p21,p22,p23,p24,p25,p35,p36,p37">
+<org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p11,p8,p4,p6,p3,p7,p5,p14,p15,p10,p16,p18,p12,p13,p19,p9,p17,p20,p21,p22,p23,p24,p25,p35,p36,p37">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1458,63 +1386,63 @@
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="lift∈LIFTS"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="⊥⇒lift_current_floor(lift)&gt;0"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="lift_directions(lift)=UP⇒⊥∧lift_current_floor∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="⊥⇒lift_current_floor(lift)&lt;TOP_FLOOR"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬lift_directions(lift)=UP"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="LIFT_STATES={lift_states(lift),STOPPED,IDLE}"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="lift∈dom(lift_floors)"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="lift∈dom(lift_current_floor)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="finite(LIFTS)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬lift_states(lift)=STOPPED"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="⊥⇒lift_floors(lift)&lt;TOP_FLOOR"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ∧lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧lift_directions(lift)∈dom({UP ↦ 1,DOWN ↦ −1})∧{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift_current_floor(lift)&lt;TOP_FLOOR"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ∧⊤∧⊤∧lift_directions(lift)∈dom({UP ↦ 1,DOWN ↦ −1})∧{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p29" org.eventb.core.predicate="lift_directions(lift)=UP⇒⊥∧lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p34" org.eventb.core.predicate="⊥⇒lift_floors(lift)&gt;0"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬UP=DOWN"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ∧lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧lift_directions(lift)∈dom({UP ↦ 1,DOWN ↦ −1})∧{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ∧lift_directions(lift)∈{UP,DOWN}∧{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="lift_current_floor∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬MOVING=IDLE"/>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ∧lift_directions(lift)∈{UP,DOWN}∧{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="lift_directions(lift)∈{UP,DOWN}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift_floors(lift)&lt;TOP_FLOOR"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p26" org.eventb.core.predicate="lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ∧⊤∧⊤∧lift_directions(lift)∈dom({UP ↦ 1,DOWN ↦ −1})∧{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_floors)∧lift_floors∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬MOVING=STOPPED"/>
-<org.eventb.core.prPred name="p30" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒⊥∧lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift_floors(lift)&gt;0"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift∈dom(lift_states)"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒⊥∧lift_current_floor∈LIFTS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift_current_floor(lift)&gt;0"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="lift∈dom(lift_states)"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬lift_states(lift)=IDLE"/>
-<org.eventb.core.prPred name="p40" org.eventb.core.predicate="lift_floors∈LIFTS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="lift_states(lift)=MOVING"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="lift_states∈LIFTS ⇸ LIFT_STATES"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬lift_directions(lift)=DOWN"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="{UP ↦ 1,DOWN ↦ −1}∈LIFT_DIRECTIONS ⇸ ℤ"/>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="LIFTS"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r9" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="change_lift_direction/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
@@ -1528,11 +1456,11 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p19,p20"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p22"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p9,p4,p6,p3,p7,p5,p11,p12,p14,p8,p15,p16,p17,p18,p19,p20,p21">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p9,p4,p6,p3,p7,p5,p14,p11,p13,p8,p15,p16,p17,p18,p19,p20,p21">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1553,8 +1481,8 @@
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
@@ -1573,16 +1501,16 @@
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬MOVING=STOPPED"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift_directions{lift ↦ {UP ↦ DOWN,DOWN ↦ UP}(lift_directions(lift))}∈LIFTS → LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_directions(lift)∈dom({UP ↦ DOWN,DOWN ↦ UP})"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="lift_directions(lift)∈dom({UP ↦ DOWN,DOWN ↦ UP})"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬STOPPED=IDLE"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="change_lift_direction/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="LIFTS,LIFT_DIRECTIONS,LIFT_STATES">
 <org.eventb.core.lang name="L"/>
@@ -1601,7 +1529,7 @@
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p7">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p6">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p20">
@@ -1614,15 +1542,15 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p21">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p6"/>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p22">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p3,p10,p6,p8,p5,p9,p7,p4,p11,p12,p13,p14,p15,p16">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="p3,p10,p5,p7,p4,p8,p6,p9,p11,p12,p13,p14,p15,p16">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p23">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="p3,p10,p6,p8,p5,p9,p7,p4,p11,p12,p13,p14,p15,p16">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="p3,p10,p5,p7,p4,p8,p6,p9,p11,p12,p13,p14,p15,p16">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1645,8 +1573,8 @@
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
-<org.eventb.core.prIdent name="lift_floors" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="LIFT_DIRECTIONS={UP,DOWN}"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})"/>
@@ -1654,12 +1582,12 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧lift_directions(lift)∈dom({UP ↦ DOWN,DOWN ↦ UP})∧{UP ↦ DOWN,DOWN ↦ UP}∈LIFT_DIRECTIONS ⇸ LIFT_DIRECTIONS"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="lift∈LIFTS"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬UP=DOWN"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬MOVING=IDLE"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="lift∈dom(lift_directions)∧lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧lift_directions(lift)∈{UP,DOWN}∧{UP ↦ DOWN,DOWN ↦ UP}∈LIFT_DIRECTIONS ⇸ LIFT_DIRECTIONS"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="lift_directions(lift)∈{UP,DOWN}"/>
@@ -1668,18 +1596,18 @@
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="LIFT_STATES={MOVING,STOPPED,IDLE}"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬MOVING=STOPPED"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(LIFTS)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="lift_floors∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="lift∈dom(lift_directions)"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="lift_directions∈LIFTS ⇸ LIFT_DIRECTIONS"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬STOPPED=IDLE"/>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="LIFTS"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="45">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
+<org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
+<org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="LIFT_DIRECTIONS"/>
+<org.eventb.core.poIdentifier name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IDLE" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
+<org.eventb.core.poIdentifier name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONT" org.eventb.core.predicate="finite(LIFTS)" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONU" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONV" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONW" org.eventb.core.predicate="TOP_FLOOR∈ℕ1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONX" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONY" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
+<org.eventb.core.poIdentifier name="INDICATORS" org.eventb.core.type="ℙ(INDICATORS)"/>
+<org.eventb.core.poIdentifier name="LIFT_NUMBERS" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONZ" org.eventb.core.predicate="LIFT_NUMBERS∈LIFTS ⤖ 1 ‥ card(LIFTS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION[" org.eventb.core.predicate="finite(LIFT_NUMBERS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION\" org.eventb.core.predicate="card(LIFT_NUMBERS)=card(LIFT_NUMBERS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#,"/>
+<org.eventb.core.poIdentifier name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.poIdentifier name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION]" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="BUTTONS" org.eventb.core.type="ℙ(BUTTONS)"/>
+<org.eventb.core.poIdentifier name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.poIdentifier name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.poIdentifier name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION^" org.eventb.core.predicate="finite(BUTTONS)" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION_" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poIdentifier name="LIFT_PRIORITIES" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.poPredicate name="LIFT_PRIORITIET" org.eventb.core.predicate="LIFT_PRIORITIES∈LIFTS ⤖ 1 ‥ card(LIFTS)" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="floor_buttons_states" org.eventb.core.type="ℙ(ℤ×ℙ(LIFT_DIRECTIONS×BUTTON_STATES))"/>
+<org.eventb.core.poIdentifier name="floor_doors_states" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×DOOR_STATES))"/>
+<org.eventb.core.poIdentifier name="indicators_next_lift_direction" org.eventb.core.type="ℙ(INDICATORS×LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="indicators_next_lift_number" org.eventb.core.type="ℙ(INDICATORS×(LIFTS×ℤ))"/>
+<org.eventb.core.poIdentifier name="lift_buttons_states" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×BUTTON_STATES))"/>
+<org.eventb.core.poIdentifier name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="lift_door_states" org.eventb.core.type="ℙ(LIFTS×DOOR_STATES)"/>
+<org.eventb.core.poIdentifier name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directioo" org.eventb.core.predicate="lift_states∈LIFTS → LIFT_STATES" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directiop" org.eventb.core.predicate="lift_directions∈LIFTS → LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directioq" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directior" org.eventb.core.predicate="lift_door_states∈LIFTS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directios" org.eventb.core.predicate="floor_doors_states∈LIFTS → (FLOORS → DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directiot" org.eventb.core.predicate="∀x⦂LIFTS·x∈LIFTS∧floor_doors_states(x)(lift_current_floor(x))=OPENED⇒lift_door_states(x)=OPENED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt5"/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directiou" org.eventb.core.predicate="lift_buttons_states∈LIFTS → (FLOORS → BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="indicators_next_lift_directiov" org.eventb.core.predicate="floor_buttons_states∈FLOORS → (LIFT_DIRECTIONS → BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.invariant#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTALLHYPindicators_next_lift_directioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="INDICATORS × (∅ ⦂ ℙ(LIFTS×ℤ))∈INDICATORS → LIFT_NUMBERS" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTALLHYPindicators_next_lift_directioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="INDICATORS × (∅ ⦂ ℙ(LIFT_DIRECTIONS))∈INDICATORS → LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directioo" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="44">
+<org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
+<org.eventb.core.poIdentifier name="floor_buttons_states'" org.eventb.core.type="ℙ(ℤ×ℙ(LIFT_DIRECTIONS×BUTTON_STATES))"/>
+<org.eventb.core.poIdentifier name="lift_buttons_states'" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×BUTTON_STATES))"/>
+<org.eventb.core.poIdentifier name="floor_doors_states'" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×DOOR_STATES))"/>
+<org.eventb.core.poIdentifier name="lift_current_floor'" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift_directions'" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="indicators_next_lift_direction'" org.eventb.core.type="ℙ(INDICATORS×LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="lift_door_states'" org.eventb.core.type="ℙ(LIFTS×DOOR_STATES)"/>
+<org.eventb.core.poIdentifier name="indicators_next_lift_number'" org.eventb.core.type="ℙ(INDICATORS×(LIFTS×ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directioo" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directioo" org.eventb.core.poStamp="44"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directiop" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directiop" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directiop" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=IDLE" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#2|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directioq" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directioq" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directioq" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=STOPPED" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#4|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directior" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="44">
+<org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directior" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directior" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=STOPPED" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#1|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directios" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="44">
+<org.eventb.core.poIdentifier name="lift_current_floor'" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directios" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directios" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=MOVING" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_directions(lift)=UP⇒lift_current_floor(lift)&lt;TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift_directions(lift)=DOWN⇒lift_current_floor(lift)&gt;0" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="lift_door_states(lift)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀x⦂ℤ·x∈FLOORS⇒floor_doors_states(lift)(x)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directiot" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift_directions'" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directiot" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directiot" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#0|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTindicators_next_lift_directiou" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPindicators_next_lift_directiou" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#EVTIDENTindicators_next_lift_directiou" org.eventb.core.poStamp="45">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=MOVING" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift∈{x⦂LIFTS·x∈LIFTS∧(lift_buttons_states(x)(lift_current_floor(x))=ACTIVE∨floor_buttons_states(lift_current_floor(x))(lift_directions(x))=ACTIVE∨(ACTIVE∉ran(lift_buttons_states(x))∧ACTIVE∈ran(floor_buttons_states(lift_current_floor(x))))) ∣ x}" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#9|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/IndicatorMachine.bpo|org.eventb.core.poFile#IndicatorMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indicators_next_lift_number∈INDICATORS → LIFT_NUMBERS" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="indicators_next_lift_direction∈INDICATORS → LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/IndicatorMachine.bum|org.eventb.core.machineFile#IndicatorMachine|org.eventb.core.invariant#7"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

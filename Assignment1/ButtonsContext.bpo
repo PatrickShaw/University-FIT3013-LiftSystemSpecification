@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="10">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
 <org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -26,7 +26,7 @@
 <org.eventb.core.poIdentifier name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 <org.eventb.core.poIdentifier name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/ButtonsContext.bpo|org.eventb.core.poFile#ButtonsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/ButtonsContext.bpo|org.eventb.core.poFile#ButtonsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="10">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(BUTTONS)" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#,"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#-"/>
 </org.eventb.core.poPredicateSet>

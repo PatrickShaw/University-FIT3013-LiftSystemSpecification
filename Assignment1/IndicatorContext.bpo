@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="9">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="11">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
 <org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -18,8 +18,6 @@
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONX" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#+"/>
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONY" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
 <org.eventb.core.poIdentifier name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
-<org.eventb.core.poIdentifier name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
-<org.eventb.core.poIdentifier name="LIFT_DOORS" org.eventb.core.type="ℙ(LIFT_DOORS)"/>
 <org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
 <org.eventb.core.poIdentifier name="OPENED" org.eventb.core.type="DOOR_STATES"/>
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONZ" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#+"/>
@@ -31,26 +29,27 @@
 <org.eventb.core.poPredicate name="LIFT_DIRECTION\" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#-"/>
 <org.eventb.core.poIdentifier name="LIFT_PRIORITIES" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.poPredicate name="LIFT_PRIORITIET" org.eventb.core.predicate="LIFT_PRIORITIES∈LIFTS ⤖ 1 ‥ card(LIFTS)" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="LIFT_PRIORITIEU" org.eventb.core.predicate="finite(LIFT_PRIORITIES)" org.eventb.core.source="/Assignment1/SchedulingContext.buc|org.eventb.core.contextFile#SchedulingContext|org.eventb.core.axiom#*"/>
 <org.eventb.core.poIdentifier name="INDICATORS" org.eventb.core.type="ℙ(INDICATORS)"/>
 <org.eventb.core.poIdentifier name="LIFT_NUMBERS" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
+<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="11">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#ABSHYP"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(LIFTS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#-"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#ABSHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
+<org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="11">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#HYPSchedulingContexv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(LIFT_NUMBERS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#,"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#,"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#HYPSchedulingContexv"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="HYPSchedulingContexv" org.eventb.core.parentSet="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="HYPSchedulingContexv" org.eventb.core.parentSet="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LIFT_NUMBERS∈LIFTS ⤖ 1 ‥ card(LIFTS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#-"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(LIFT_NUMBERS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#HYPSchedulingContexv" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/IndicatorContext.bpo|org.eventb.core.poFile#IndicatorContext|org.eventb.core.poPredicateSet#HYPSchedulingContexv" org.eventb.core.poStamp="11">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="card(LIFT_NUMBERS)=card(LIFT_NUMBERS)" org.eventb.core.source="/Assignment1/IndicatorContext.buc|org.eventb.core.contextFile#IndicatorContext|org.eventb.core.axiom#,"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

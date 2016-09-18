@@ -29,8 +29,8 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="lift_door_states(lift) = CLOSED"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="∀x·x ∈ FLOORS ⇒ floor_doors_states(lift)(x) = CLOSED"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="lift_door_states(lift) = CLOSED" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="The floor doors for the lift should be closed if the lift is moving to another floor" org.eventb.core.label="grd5" org.eventb.core.predicate="∀x·x ∈ FLOORS ⇒ floor_doors_states(lift)(x) = CLOSED" org.eventb.core.theorem="true"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evt=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_lift_direction">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_lift_direction"/>

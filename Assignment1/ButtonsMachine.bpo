@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="77">
+<org.eventb.core.poFile org.eventb.core.poStamp="79">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="77">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -89,8 +89,10 @@
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPfloor_buttons_statew" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTIDENTfloor_buttons_statew" org.eventb.core.poStamp="77">
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloor_buttons_statew" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#EVTIDENTfloor_buttons_statew" org.eventb.core.poStamp="79">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=STOPPED" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_door_states(lift)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift))=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTfloor_buttons_statex" org.eventb.core.parentSet="/Assignment1/ButtonsMachine.bpo|org.eventb.core.poFile#ButtonsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="77">
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>

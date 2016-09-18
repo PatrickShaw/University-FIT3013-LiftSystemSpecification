@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="110">
+<org.eventb.core.poFile org.eventb.core.poStamp="124">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="58">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -133,13 +133,13 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionx" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionx'" org.eventb.core.poStamp="108">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift∉dom(lift_request_pool)∨((lift_movement_directions(lift)=UP⇒lift_current_floor(lift)=TOP_FLOOR)∧(lift_movement_directions(lift)=DOWN⇒lift_current_floor(lift)=0))" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#O|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="move_lift/grd11/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="97">
+<org.eventb.core.poSequent name="move_lift/grd10/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="124">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylifx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_request_pool)" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#:|org.eventb.core.guard#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#:|org.eventb.core.guard#)"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylifx"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="move_lift/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="97">
+<org.eventb.core.poSequent name="move_lift/grd11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="124">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylify"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#:|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#:|org.eventb.core.guard#("/>
@@ -181,13 +181,13 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directiony" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylif{" org.eventb.core.poStamp="97">
 <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="lift_movement_directions(lift)=DOWN⇒(∃x⦂ℤ·x∈ran({lift} ◁ lift_request_pool)∧lift_current_floor(lift)&gt;x)" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#:|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="change_lift_direction/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="99">
+<org.eventb.core.poSequent name="change_lift_direction/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="124">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionz*"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_movement_directions(lift)=UP⇒(∀x⦂ℤ·x∈ran({lift} ◁ lift_request_pool)⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ))" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#;|org.eventb.core.guard#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#;|org.eventb.core.guard#)"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionz*"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="change_lift_direction/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="99">
+<org.eventb.core.poSequent name="change_lift_direction/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="124">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionzlifv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_movement_directions(lift)=DOWN⇒(∀x⦂ℤ·x∈ran({lift} ◁ lift_request_pool)⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ))" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#;|org.eventb.core.guard#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#;|org.eventb.core.guard#*"/>
@@ -209,11 +209,12 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionz" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionzlifv" org.eventb.core.poStamp="99">
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="lift_movement_directions(lift)=DOWN⇒(∀x⦂ℤ·x∈ran({lift} ◁ lift_request_pool)⇒lift_current_floor(lift)&lt;x)" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#;|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="97">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="121">
+<org.eventb.core.poIdentifier name="lift_buttons_states'" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×BUTTON_STATES))"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 <org.eventb.core.poIdentifier name="lift_door_states'" org.eventb.core.type="ℙ(LIFTS×DOOR_STATES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction{" org.eventb.core.poStamp="97">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction{" org.eventb.core.poStamp="121">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_door_states(lift)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_states(lift)∈{STOPPED,IDLE}" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
@@ -227,11 +228,27 @@
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift))=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="97">
+<org.eventb.core.poSequent name="open_floor_door/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="122">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_request_pool ∖ {lift ↦ lift_current_floor(lift)}∈LIFTS ↔ FLOORS" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#@"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poSequent#open_floor_door\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="open_floor_door/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="122">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#?|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#?|org.eventb.core.action#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="122">
 <org.eventb.core.poIdentifier name="floor_doors_states'" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×DOOR_STATES))"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.poIdentifier name="lift_request_pool'" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction}" org.eventb.core.poStamp="97">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction}" org.eventb.core.poStamp="122">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift))=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_states(lift)∈{STOPPED,IDLE}" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift_door_states(lift)=OPENED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#,"/>
@@ -338,6 +355,48 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor∈FLOORS" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B|org.eventb.core.guard#0"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="direction∈LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B|org.eventb.core.guard#1"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="floor_buttons_states(floor)(direction)=ACTIVE" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="assign_floor_request_to_lift/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="124">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directioo+directioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(LIFT_PRIORITIES)∧LIFT_PRIORITIES∈LIFTS ⇸ ℤ∧(∀y⦂LIFTS·(∀x⦂LIFTS·x∈LIFTS⇒x∉dom(lift_request_pool)∨(lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(lift_movement_directions(lift)=direction⇒(direction=UP⇒x∈dom(lift_request_pool)∧lift_request_pool∈LIFTS ⇸ ℤ)∧((direction=UP⇒lift_request_pool(x)≤floor)∧direction=DOWN⇒x∈dom(lift_request_pool)∧lift_request_pool∈LIFTS ⇸ ℤ))))∧(y∈{x⦂LIFTS·x∈LIFTS∧(x∉dom(lift_request_pool)∨(lift_movement_directions(lift)=direction∧(direction=UP⇒lift_request_pool(x)≤floor)∧(direction=DOWN⇒lift_request_pool(x)≥floor))) ∣ x}⇒y∈dom(LIFT_PRIORITIES)))∧{y⦂LIFTS·y∈{x⦂LIFTS·x∈LIFTS∧(x∉dom(lift_request_pool)∨(lift_movement_directions(lift)=direction∧(direction=UP⇒lift_request_pool(x)≤floor)∧(direction=DOWN⇒lift_request_pool(x)≥floor))) ∣ x} ∣ LIFT_PRIORITIES(y)}≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈{y⦂LIFTS·y∈{x⦂LIFTS·x∈LIFTS∧(x∉dom(lift_request_pool)∨(lift_movement_directions(lift)=direction∧(direction=UP⇒lift_request_pool(x)≤floor)∧(direction=DOWN⇒lift_request_pool(x)≥floor))) ∣ x} ∣ LIFT_PRIORITIES(y)}⇒b≥x)" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directioo+directioq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="assign_floor_request_to_lift/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="124">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directioo+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(lift_request_pool ∖ {lift ↦ floor})∪{lift ↦ floor}∈LIFTS ↔ FLOORS" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#F"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poSequent#assign_floor_request_to_lift\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="assign_floor_request_to_lift/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="124">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directioo+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_request_pool ∖ {floor ↦ direction}∈FLOORS ↔ LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#Q"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#Q"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poSequent#assign_floor_request_to_lift\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directioo+" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="124">
+<org.eventb.core.poIdentifier name="floor_buttons_states'" org.eventb.core.type="ℙ(ℤ×ℙ(LIFT_DIRECTIONS×BUTTON_STATES))"/>
+<org.eventb.core.poIdentifier name="direction" org.eventb.core.type="LIFT_DIRECTIONS"/>
+<org.eventb.core.poIdentifier name="floor_request_pool'" org.eventb.core.type="ℙ(ℤ×LIFT_DIRECTIONS)"/>
+<org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
+<org.eventb.core.poIdentifier name="lift_request_pool'" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directioo+directioq" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directioo+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor∈FLOORS" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="direction∈LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B|org.eventb.core.guard#1"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="floor_buttons_states(floor)(direction)=ACTIVE" org.eventb.core.source="/Assignment1/ButtonsMachine.bum|org.eventb.core.machineFile#ButtonsMachine|org.eventb.core.event#B|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="floor ↦ direction∈floor_request_pool" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directioo+" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directioo+directioq" org.eventb.core.poStamp="124">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="LIFT_PRIORITIES(lift)=max({y⦂LIFTS·y∈{x⦂LIFTS·x∈LIFTS∧(x∉dom(lift_request_pool)∨(lift_movement_directions(lift)=direction∧(direction=UP⇒lift_request_pool(x)≤floor)∧(direction=DOWN⇒lift_request_pool(x)≥floor))) ∣ x} ∣ LIFT_PRIORITIES(y)})" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.event#R|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/SchedulingMachine.bpo|org.eventb.core.poFile#SchedulingMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="97">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_request_pool∈LIFTS ↔ FLOORS" org.eventb.core.source="/Assignment1/SchedulingMachine.bum|org.eventb.core.machineFile#SchedulingMachine|org.eventb.core.invariant#F"/>

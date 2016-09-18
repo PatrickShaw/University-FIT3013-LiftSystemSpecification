@@ -34,6 +34,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_lift_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_lift_door"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="lift_buttons_states(lift) ≔ lift_buttons_states(lift)  {lift_current_floor(lift) ↦ INACTIVE}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_lift_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_lift_door"/>

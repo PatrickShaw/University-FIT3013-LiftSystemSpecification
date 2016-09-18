@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="lift_request_pool ≔ ∅" org.eventb.core.comment="No one is currently waiting for a lift" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="floor_request_pool ≔ ∅" org.eventb.core.comment="No one is currently inside the lift waiting to arrive at their destination" org.eventb.core.label="act11"/>
+</org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="SchedulingContext"/>
 <org.eventb.core.refinesMachine name=")" org.eventb.core.target="ButtonsMachine"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="/" org.eventb.core.identifier="lift_states"/>
@@ -12,6 +15,7 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="5" org.eventb.core.identifier="floor_buttons_states"/>
 <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="If there is a request but no one is adressing" org.eventb.core.label="grd2" org.eventb.core.predicate=""/>
 </org.eventb.core.event>
 <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_lift"/>
@@ -53,4 +57,9 @@
 <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_floor_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_floor_button"/>
 </org.eventb.core.event>
+<org.eventb.core.invariant name="F" org.eventb.core.comment="Mapping for each lift, to some destination floor" org.eventb.core.label="inv1" org.eventb.core.predicate="lift_request_pool ∈ LIFTS → FLOORS"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="G" org.eventb.core.comment="Request pool for people inside a lift. That is, request pool for dropping people off at their destination." org.eventb.core.identifier="lift_request_pool"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="H" org.eventb.core.comment="Request pool for people waiting for a lift, on each floor." org.eventb.core.identifier="floor_request_pool"/>
+<org.eventb.core.invariant name="I" org.eventb.core.comment="Mapping between a floor and the direction that the person wants to go in" org.eventb.core.label="inv2" org.eventb.core.predicate="floor_request_pool ∈ FLOORS → DIRECTION"/>
+<org.eventb.core.invariant name="J" org.eventb.core.comment="If someone is wants to go somewhere inside the lift, then the lift musn't be IDLE" org.eventb.core.label="inv3" org.eventb.core.predicate="∀lift·lift∈LIFTS∧card(lift_request_pool(lift))&gt;0⇒lift_states(lift)≠IDLE"/>
 </org.eventb.core.machineFile>

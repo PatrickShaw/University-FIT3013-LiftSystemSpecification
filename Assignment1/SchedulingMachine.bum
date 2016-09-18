@@ -22,11 +22,11 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="start_lift"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Only allow starting a lift if it has a service request to fullfill" org.eventb.core.label="grd5" org.eventb.core.predicate="lift ∈ dom(lift_request_pool)"/>
 <org.eventb.core.guard name="(" org.eventb.core.comment="Disallow starting if the current floor is apart of a service request" org.eventb.core.label="grd4" org.eventb.core.predicate="lift ↦ lift_current_floor(lift) ∉ lift_request_pool"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>
-<org.eventb.core.guard name="(" org.eventb.core.comment="If the lift has service requests, then only stop when the floor is apart of a request" org.eventb.core.label="grd2" org.eventb.core.predicate="lift ∈ dom(lift_request_pool) ⇒ lift ↦ lift_current_floor(lift) ∈ lift_request_pool"/>
 </org.eventb.core.event>
 <org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
@@ -38,8 +38,8 @@
 <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_lift_direction">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_lift_direction"/>
 <org.eventb.core.guard name="(" org.eventb.core.comment="Only allow change of direction if a lift has a service request" org.eventb.core.label="grd5" org.eventb.core.predicate="lift ∈ dom(lift_request_pool)"/>
-<org.eventb.core.guard name=")" org.eventb.core.comment="If the lift is going up, then only change direction when every lift request is below the lift" org.eventb.core.label="grd6" org.eventb.core.predicate="lift_movement_directions(lift) = UP ⇒ (∀x·x ∈ ran({lift} ◁ lift_request_pool) ∧ lift_current_floor(lift) &gt; x)"/>
-<org.eventb.core.guard name="*" org.eventb.core.comment="If the lift is going down, then only change direction when every lift request is above the lift" org.eventb.core.label="grd7" org.eventb.core.predicate="lift_movement_directions(lift) = DOWN ⇒ (∀x·x ∈ ran({lift} ◁ lift_request_pool) ∧ lift_current_floor(lift) &lt; x)"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="If the lift is going up, then only change direction when every lift request is below the lift" org.eventb.core.label="grd6" org.eventb.core.predicate="lift_movement_directions(lift) = UP ⇒ (∀x·x ∈ ran({lift} ◁ lift_request_pool) ⇒ lift_current_floor(lift) &gt; x)"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="If the lift is going down, then only change direction when every lift request is above the lift" org.eventb.core.label="grd7" org.eventb.core.predicate="lift_movement_directions(lift) = DOWN ⇒ (∀x·x ∈ ran({lift} ◁ lift_request_pool) ⇒ lift_current_floor(lift) &lt; x)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_lift_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_lift_door"/>
@@ -56,7 +56,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift_button"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="lift_request_pool ≔ lift_request_pool  {lift ↦ floor}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="lift_request_pool ≔ (lift_request_pool ∖ {lift ↦ floor}) ∪ {lift ↦ floor}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_lift_button"/>

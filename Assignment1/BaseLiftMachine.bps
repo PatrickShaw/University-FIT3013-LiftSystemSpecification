@@ -17,6 +17,8 @@
 <org.eventb.core.psStatus name="move_lift/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="move_lift/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="change_lift_direction/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="change_lift_direction/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="change_lift_direction/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="change_lift_direction/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="change_lift_direction/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="change_lift_direction/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="change_lift_direction/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

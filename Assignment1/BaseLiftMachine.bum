@@ -44,5 +44,7 @@
 <org.eventb.core.action name="(" org.eventb.core.assignment="lift_movement_directions(lift) ≔ {UP ↦ DOWN, DOWN ↦ UP}(lift_movement_directions(lift))" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="lift ∈ LIFTS"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_states(lift) ≠ MOVING"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="Lift cannot change direction to down if already on the bottom floor" org.eventb.core.label="grd3" org.eventb.core.predicate="lift_movement_directions(lift) ≠ DOWN ⇒ lift_current_floor(lift) &gt; 0"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="Lift cannot change direction to up if already on the top floor" org.eventb.core.label="grd4" org.eventb.core.predicate="lift_movement_directions(lift) ≠ UP ⇒ lift_current_floor(lift) &lt; TOP_FLOOR"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

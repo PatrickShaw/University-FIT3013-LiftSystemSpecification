@@ -21,8 +21,8 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="start_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="start_lift"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_door_states(lift) = CLOSED"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift)) = CLOSED"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="lift_door_states(lift) = CLOSED"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift)) = CLOSED"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evt:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>

@@ -68,4 +68,13 @@
 <org.eventb.core.invariant name="J" org.eventb.core.comment="If someone is wants to go somewhere inside the lift, then the lift musn't be IDLE" org.eventb.core.label="inv3" org.eventb.core.predicate="∀lift·lift∈LIFTS∧card(lift_request_pool(lift))&gt;0⇒lift_states(lift)≠IDLE"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="K" org.eventb.core.comment="The inteded direction that a lift will go in after the lift is filled with a single person" org.eventb.core.identifier="lift_scheduled_directions"/>
 <org.eventb.core.invariant name="L" org.eventb.core.comment="At least 1 lift can't be IDLE if there is a floor request in the request pool" org.eventb.core.label="inv4" org.eventb.core.predicate="card({lift ∣ lift_states(lift) ≠ IDLE}) &gt; 0 ∨ card(floor_request_pool) = 0"/>
+<org.eventb.core.event name="M" org.eventb.core.comment="If people want to go in the opposite direction to the lift, it's time to change direction" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_scheduled_direction_for_lift_requests">
+<org.eventb.core.guard name="'" org.eventb.core.comment="Has to be people in the lift for this evewnt" org.eventb.core.label="grd1" org.eventb.core.predicate="card(lift_request_pool(lift)) &gt; 0"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="lift"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="lift ∈ LIFTS"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="lift_scheduled_directions(lift) ≔ {UP ↦ DOWN, DOWN ↦ UP}lift_scheduled_directions(lift)" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="lift_movement_directions(lift) ≔ lift_scheduled_directions(lift)" org.eventb.core.comment="We know for sure that the lift needs to move in the same direction that it is scheduled this time" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="All requests must be in the opposite direction to what the lift is currently scheduled to do" org.eventb.core.label="grd3" org.eventb.core.predicate="∀request·request∈lift_request_pool(lift)⇒&#13;&#10;&#9;lift_directions(lift)=UP∧request&lt;lift_current_floor(lift)&#13;&#10;&#9;∨&#13;&#10;&#9;lift_directions(lift)=DOWN∧request&gt;lift_current_floor(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="evt1"/>
 </org.eventb.core.machineFile>

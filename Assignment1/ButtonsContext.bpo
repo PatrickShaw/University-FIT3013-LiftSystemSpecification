@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="10">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poFile org.eventb.core.poStamp="63">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="63">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
 <org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -12,22 +12,44 @@
 <org.eventb.core.poIdentifier name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONT" org.eventb.core.predicate="finite(LIFTS)" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#0"/>
-<org.eventb.core.poPredicate name="LIFT_DIRECTIONU" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#\/"/>
-<org.eventb.core.poPredicate name="LIFT_DIRECTIONV" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#1"/>
-<org.eventb.core.poPredicate name="LIFT_DIRECTIONW" org.eventb.core.predicate="TOP_FLOOR∈ℕ1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#-"/>
-<org.eventb.core.poPredicate name="LIFT_DIRECTIONX" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#+"/>
-<org.eventb.core.poPredicate name="LIFT_DIRECTIONY" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONU" org.eventb.core.predicate="finite(LIFT_STATES)" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONV" org.eventb.core.predicate="partition(LIFT_STATES,{MOVING},{STOPPED},{IDLE})" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONW" org.eventb.core.predicate="finite(LIFT_DIRECTIONS)" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONX" org.eventb.core.predicate="partition(LIFT_DIRECTIONS,{UP},{DOWN})" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONY" org.eventb.core.predicate="TOP_FLOOR∈ℕ1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTIONZ" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION[" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="LIFT_DIRECTION\" org.eventb.core.predicate="finite(FLOORS)" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#8"/>
 <org.eventb.core.poIdentifier name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.poIdentifier name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
+<org.eventb.core.poIdentifier name="LIFT_DOORS" org.eventb.core.type="ℙ(LIFT_DOORS)"/>
 <org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.poIdentifier name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
+<org.eventb.core.poIdentifier name="LIFT_DOOR_OF_FLOOR_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×LIFT_DOORS)"/>
+<org.eventb.core.poIdentifier name="LIFT_OF_DOOR" org.eventb.core.type="ℙ(LIFT_DOORS×LIFTS)"/>
+<org.eventb.core.poIdentifier name="LIFT_OF_FLOOR_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×LIFTS)"/>
 <org.eventb.core.poIdentifier name="OPENED" org.eventb.core.type="DOOR_STATES"/>
-<org.eventb.core.poPredicate name="LIFT_DIRECTIONZ" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#+"/>
-<org.eventb.core.poIdentifier name="BUTTONS" org.eventb.core.type="ℙ(BUTTONS)"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOS" org.eventb.core.predicate="finite(DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOT" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOU" org.eventb.core.predicate="finite(LIFT_DOORS)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOV" org.eventb.core.predicate="finite(FLOOR_DOORS)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOW" org.eventb.core.predicate="LIFT_OF_DOOR∈LIFT_DOORS → LIFTS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOX" org.eventb.core.predicate="FLOOR_OF_DOOR∈FLOOR_DOORS → FLOORS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOY" org.eventb.core.predicate="LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS → LIFT_DOORS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOZ" org.eventb.core.predicate="finite(LIFT_OF_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO[" org.eventb.core.predicate="finite(FLOOR_OF_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO\" org.eventb.core.predicate="finite(LIFT_DOOR_OF_FLOOR_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO]" org.eventb.core.predicate="LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS → LIFTS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#A"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO^" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS⇒LIFT_OF_FLOOR_DOOR(floor_door)=LIFT_OF_DOOR(LIFT_DOOR_OF_FLOOR_DOOR(floor_door))" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#@"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO_" org.eventb.core.predicate="finite(LIFT_OF_FLOOR_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#&gt;"/>
 <org.eventb.core.poIdentifier name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
+<org.eventb.core.poIdentifier name="FLOOR_BUTTONS" org.eventb.core.type="ℙ(FLOOR_BUTTONS)"/>
+<org.eventb.core.poIdentifier name="LIFT_BUTTONS" org.eventb.core.type="ℙ(LIFT_BUTTONS)"/>
 <org.eventb.core.poIdentifier name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 <org.eventb.core.poIdentifier name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/ButtonsContext.bpo|org.eventb.core.poFile#ButtonsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="10">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(BUTTONS)" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#,"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/ButtonsContext.bpo|org.eventb.core.poFile#ButtonsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="63">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(BUTTON_STATES)" org.eventb.core.source="/Assignment1/ButtonsContext.buc|org.eventb.core.contextFile#ButtonsContext|org.eventb.core.axiom#4"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

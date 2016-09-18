@@ -4,5 +4,23 @@
 <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="DOOR_STATES"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="OPENED"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="CLOSED"/>
+<org.eventb.core.axiom name="," org.eventb.core.label="axm2" org.eventb.core.predicate="finite(DOOR_STATES)"/>
 <org.eventb.core.axiom name="+" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(DOOR_STATES, {OPENED}, {CLOSED})"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(LIFT_DOORS)"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm5" org.eventb.core.predicate="finite(FLOOR_DOORS)"/>
+<org.eventb.core.carrierSet name="/" org.eventb.core.identifier="FLOOR_DOORS"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="LIFT_DOORS"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="3" org.eventb.core.comment="The lift associated with a particular lift door" org.eventb.core.identifier="LIFT_OF_DOOR"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.comment="The floor associated with a particular floor_door" org.eventb.core.identifier="FLOOR_OF_DOOR"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm6" org.eventb.core.predicate="LIFT_OF_DOOR ∈ LIFT_DOORS → LIFTS"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="axm7" org.eventb.core.predicate="FLOOR_OF_DOOR ∈ FLOOR_DOORS → FLOORS"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm10" org.eventb.core.predicate="LIFT_DOOR_OF_FLOOR_DOOR ∈ FLOOR_DOORS → LIFT_DOORS"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm8" org.eventb.core.predicate="finite(LIFT_OF_DOOR)"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm9" org.eventb.core.predicate="finite(FLOOR_OF_DOOR)"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="axm11" org.eventb.core.predicate="finite(LIFT_DOOR_OF_FLOOR_DOOR)"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="=" org.eventb.core.comment="The lift door that the floor door is associated with" org.eventb.core.identifier="LIFT_DOOR_OF_FLOOR_DOOR"/>
+<org.eventb.core.axiom name="A" org.eventb.core.label="axm14" org.eventb.core.predicate="LIFT_OF_FLOOR_DOOR ∈ FLOOR_DOORS → LIFTS"/>
+<org.eventb.core.axiom name="@" org.eventb.core.label="axm13" org.eventb.core.predicate="∀floor_door·floor_door∈FLOOR_DOORS⇒ (&#13;&#10;&#9;LIFT_OF_FLOOR_DOOR(floor_door) = LIFT_OF_DOOR(LIFT_DOOR_OF_FLOOR_DOOR(floor_door))&#13;&#10;)"/>
+<org.eventb.core.axiom name="&gt;" org.eventb.core.label="axm12" org.eventb.core.predicate="finite(LIFT_OF_FLOOR_DOOR)"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="?" org.eventb.core.comment="Helper function that gets the lift associated with a particular floor door" org.eventb.core.identifier="LIFT_OF_FLOOR_DOOR"/>
 </org.eventb.core.contextFile>

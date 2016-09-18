@@ -2,13 +2,18 @@
 <org.eventb.core.psFile>
 <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="93" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="93" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="activate_lift_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="110" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="activate_lift_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="111" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="activate_lift_button/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="111" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="activate_lift_button/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="111" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="activate_floor_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="activate_floor_button/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="activate_floor_button/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="deactivate_floor_button/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="deactivate_floor_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="deactivate_floor_button/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/grd4/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="113" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="deactivate_lift_button/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="deactivate_lift_button/grd1/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="deactivate_lift_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="101" org.eventb.core.psManual="false"/>

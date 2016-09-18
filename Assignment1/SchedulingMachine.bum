@@ -2,6 +2,7 @@
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="lift_request_pool ≔ ∅" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="floor_request_pool ≔ ∅" org.eventb.core.label="act11"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="SchedulingContext"/>
 <org.eventb.core.refinesMachine name=")" org.eventb.core.target="ButtonsMachine"/>
@@ -27,6 +28,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="stop_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="stop_lift"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Only stop the lift if it's not servicing a request (or if it reaches the top or bottom floors)" org.eventb.core.label="grd2" org.eventb.core.predicate="lift ∉ dom(lift_request_pool) ∨ (&#13;&#10;  (lift_movement_directions(lift) = UP ⇒ lift_current_floor(lift) = TOP_FLOOR) ∧&#13;&#10;  (lift_movement_directions(lift) = DOWN ⇒ lift_current_floor(lift) = 0)&#13;&#10;)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_lift">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="move_lift"/>
@@ -37,7 +39,6 @@
 </org.eventb.core.event>
 <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="change_lift_direction">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="change_lift_direction"/>
-<org.eventb.core.guard name="(" org.eventb.core.comment="Only allow change of direction if a lift has a service request" org.eventb.core.label="grd5" org.eventb.core.predicate="lift ∈ dom(lift_request_pool)"/>
 <org.eventb.core.guard name=")" org.eventb.core.comment="If the lift is going up, then only change direction when every lift request is below the lift" org.eventb.core.label="grd6" org.eventb.core.predicate="lift_movement_directions(lift) = UP ⇒ (∀x·x ∈ ran({lift} ◁ lift_request_pool) ⇒ lift_current_floor(lift) &gt; x)"/>
 <org.eventb.core.guard name="*" org.eventb.core.comment="If the lift is going down, then only change direction when every lift request is above the lift" org.eventb.core.label="grd7" org.eventb.core.predicate="lift_movement_directions(lift) = DOWN ⇒ (∀x·x ∈ ran({lift} ◁ lift_request_pool) ⇒ lift_current_floor(lift) &lt; x)"/>
 </org.eventb.core.event>
@@ -64,10 +65,14 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_floor_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_floor_button"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="floor_request_pool ≔ (floor_request_pool ∖ {floor ↦ direction}) ∪ {floor ↦ direction}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_floor_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_floor_button"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="floor_request_pool ≔ floor_request_pool ∖ {floor ↦ direction}" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="F" org.eventb.core.comment="Mapping for each lift, to some destination floor" org.eventb.core.label="inv1" org.eventb.core.predicate="lift_request_pool ∈ LIFTS ↔ FLOORS"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="G" org.eventb.core.identifier="lift_request_pool"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="P" org.eventb.core.identifier="floor_request_pool"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.label="inv2" org.eventb.core.predicate="floor_request_pool ∈ FLOORS ↔ LIFT_DIRECTIONS"/>
 </org.eventb.core.machineFile>

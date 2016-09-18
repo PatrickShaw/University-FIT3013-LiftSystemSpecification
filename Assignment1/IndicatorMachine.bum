@@ -35,25 +35,25 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="9" org.eventb.core.identifier="indicators_next_lift_direction"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.comment="Represents what floor number the indicator is displaying for a particular lift on a paricular floor" org.eventb.core.identifier="indicators_next_lift_number"/>
 <org.eventb.core.refinesMachine name=":" org.eventb.core.target="SchedulingMachine"/>
-<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="open_lift_door">
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_lift_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_lift_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="close_lift_door">
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_lift_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_lift_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="open_floor_door">
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_floor_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_floor_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="close_floor_door">
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_floor_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_floor_door"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="activate_floor_button">
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_floor_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_floor_button"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="activate_lift_button">
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift_button"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="deactivate_floor_button">
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_floor_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="deactivate_floor_button"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="deactivate_lift_button">

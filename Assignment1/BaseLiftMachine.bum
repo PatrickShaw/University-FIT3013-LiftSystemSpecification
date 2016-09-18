@@ -35,8 +35,8 @@
 <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="move_lift">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="lift"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="lift_states(lift) = MOVING"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_directions(lift) = UP ⇒ lift_current_floor(lift) &lt; TOP_FLOOR"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="lift_directions(lift) = DOWN ⇒ lift_current_floor(lift) &gt; 0"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="Can't go up if the lift is already on the top floor" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_directions(lift) = UP ⇒ lift_current_floor(lift) &lt; TOP_FLOOR"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Can't go up if the lift is already on the bottom floor" org.eventb.core.label="grd3" org.eventb.core.predicate="lift_directions(lift) = DOWN ⇒ lift_current_floor(lift) &gt; 0"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="lift_current_floor(lift) ≔ lift_current_floor(lift) + {UP ↦ 1, DOWN ↦ −1}(lift_directions(lift))" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="change_lift_direction">

@@ -829,4 +829,24 @@
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="open_lift_door/grd1/GRD"/>
+<org.eventb.core.prProof name="open_lift_door/grd2/GRD"/>
+<org.eventb.core.prProof name="open_lift_door/act1/SIM"/>
+<org.eventb.core.prProof name="close_lift_door/grd1/GRD"/>
+<org.eventb.core.prProof name="close_lift_door/grd2/GRD"/>
+<org.eventb.core.prProof name="close_lift_door/act1/SIM"/>
+<org.eventb.core.prProof name="open_floor_door/grd1/GRD"/>
+<org.eventb.core.prProof name="open_floor_door/grd2/GRD"/>
+<org.eventb.core.prProof name="open_floor_door/grd3/GRD"/>
+<org.eventb.core.prProof name="open_floor_door/act1/SIM"/>
+<org.eventb.core.prProof name="close_floor_door/grd1/GRD"/>
+<org.eventb.core.prProof name="close_floor_door/act1/SIM"/>
+<org.eventb.core.prProof name="activate_floor_button/grd1/GRD"/>
+<org.eventb.core.prProof name="activate_floor_button/grd3/GRD"/>
+<org.eventb.core.prProof name="activate_floor_button/act1/SIM"/>
+<org.eventb.core.prProof name="activate_lift_button/grd1/GRD"/>
+<org.eventb.core.prProof name="activate_lift_button/grd3/GRD"/>
+<org.eventb.core.prProof name="activate_lift_button/act1/SIM"/>
+<org.eventb.core.prProof name="deactivate_floor_button/grd1/GRD"/>
+<org.eventb.core.prProof name="deactivate_floor_button/act1/SIM"/>
 </org.eventb.core.prFile>

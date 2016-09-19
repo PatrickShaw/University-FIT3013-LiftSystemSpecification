@@ -77,4 +77,10 @@
 <org.eventb.core.parameter name="/" org.eventb.core.identifier="direction"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="D" org.eventb.core.target="ButtonsContext"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="E" org.eventb.core.identifier="total_distance_travelled"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="F" org.eventb.core.identifier="total_distance_travelled_per_lift"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="G" org.eventb.core.identifier="total_times_lift_doors_opened"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="H" org.eventb.core.identifier="total_times_lift_doors_opened_per_lift"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="I" org.eventb.core.identifier="total_times_floor_doors_opened"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="J" org.eventb.core.identifier="total_times_floor_doors_opened_per_floor"/>
 </org.eventb.core.machineFile>

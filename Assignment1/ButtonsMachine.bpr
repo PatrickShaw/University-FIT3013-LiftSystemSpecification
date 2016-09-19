@@ -5596,10 +5596,10 @@
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬floor_buttons_states(floor)(direction)=INACTIVE">
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="deactivate_floor_button/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="BUTTON_STATES,LIFT_DIRECTIONS">
 <org.eventb.core.lang name="L"/>
@@ -6213,11 +6213,11 @@
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFTS×ℙ(DOOR_SIDES×DOOR_STATES))"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="deactivate_lift_button/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="BUTTON_STATES,LIFTS">
 <org.eventb.core.lang name="L"/>
@@ -6676,10 +6676,10 @@
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
 <org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="activate_floor_button/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="BUTTON_STATES,LIFT_DIRECTIONS">
 <org.eventb.core.lang name="L"/>
@@ -6873,10 +6873,10 @@
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
 <org.eventb.core.prIdent name="ACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="deactivate_lift_button/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="side" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="BUTTON_STATES,DOOR_SIDES,DOOR_STATES,LIFTS">
 <org.eventb.core.lang name="L"/>
@@ -8371,10 +8371,10 @@
 <org.eventb.core.prIdent name="BUTTON_STATES" org.eventb.core.type="ℙ(BUTTON_STATES)"/>
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="open_lift_door/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="BUTTON_STATES,DOOR_SIDES,DOOR_STATES,LIFTS">
 <org.eventb.core.lang name="L"/>

@@ -3,6 +3,10 @@
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="lift_door_states ≔ LIFTS × {DOOR_SIDES × {CLOSED}}" org.eventb.core.label="act6"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="floor_doors_states ≔ LIFTS × {FLOORS × {DOOR_SIDES × {CLOSED}}}" org.eventb.core.comment="I have no idea how to initialise this" org.eventb.core.label="act7"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="total_times_lift_doors_opened ≔ 0" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="total_times_lift_doors_opened_per_lift ≔ LIFTS × {0}" org.eventb.core.label="act15"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="total_times_floor_doors_opened ≔ 0" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="total_times_floor_doors_opened_per_floor ≔ FLOORS × {0}" org.eventb.core.label="act17"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name=")" org.eventb.core.target="DoorsContext"/>
 <org.eventb.core.refinesMachine name="*" org.eventb.core.target="BaseLiftMachine"/>
@@ -46,6 +50,8 @@
 <org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="lift_door_states(lift)(side) = CLOSED"/>
 <org.eventb.core.guard name="1" org.eventb.core.comment="This also prevents lift from open a side that is disabled" org.eventb.core.label="grd5" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift))(side) = CLOSED"/>
 <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="IS_DISABLED_DOOR(lift)(lift_current_floor(lift))(side) = FALSE"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="total_times_lift_doors_opened ≔ total_times_lift_doors_opened + 1" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="total_times_lift_doors_opened_per_lift(lift) ≔ total_times_lift_doors_opened_per_lift(lift) + 1" org.eventb.core.label="act11"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="evt5" org.eventb.core.comment="If a floor door is open, then the associated lift's door must also be open" org.eventb.core.label="inv4" org.eventb.core.predicate="∀lift·lift ∈ LIFTS ⇒ (&#13;&#10;&#9;∀side·side ∈ DOOR_SIDES ∧ (floor_doors_states(lift)(lift_current_floor(lift))(side) = OPENED) ⇒ (&#13;&#10;&#9;&#9;lift_door_states(lift)(side) = OPENED &#13;&#10;&#9;)&#13;&#10;)"/>
 <org.eventb.core.invariant name="evt&gt;" org.eventb.core.comment="Each floor must have atleast one non disabled side for each lift&#10;" org.eventb.core.label="inv5" org.eventb.core.predicate="∀floor·floor ∈ FLOORS ⇒ (&#13;&#10;&#9;∀lift·lift ∈ LIFTS ⇒ (&#13;&#10;&#9;&#9;∃side·side ∈ DOOR_SIDES ∧ IS_DISABLED_DOOR(lift)(floor)(side) = FALSE&#13;&#10;&#9;)&#13;&#10;)"/>
@@ -70,6 +76,8 @@
 <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="lift_door_states(lift)(side) = OPENED"/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="floor_doors_states(lift)(lift_current_floor(lift))(side) = CLOSED"/>
 <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="IS_DISABLED_DOOR(lift)(lift_current_floor(lift))(side) = FALSE"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="total_times_floor_doors_opened ≔ total_times_floor_doors_opened + 1" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="total_times_floor_doors_opened_per_floor(lift_current_floor(lift)) ≔ total_times_floor_doors_opened_per_floor(lift_current_floor(lift)) + 1" org.eventb.core.label="act11"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evtA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="close_floor_door">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="lift"/>
@@ -82,4 +90,14 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="floor_doors_states(lift) ≔ floor_doors_states(lift)  {lift_current_floor(lift) ↦ {side ↦ CLOSED, OPPOSITE_SIDE(side) ↦ floor_doors_states(lift)(lift_current_floor(lift))(OPPOSITE_SIDE(side))}}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="IS_DISABLED_DOOR(lift)(lift_current_floor(lift))(side) = FALSE"/>
 </org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evtB" org.eventb.core.identifier="total_distance_travelled"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evtC" org.eventb.core.identifier="total_distance_travelled_per_lift"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evtD" org.eventb.core.identifier="total_times_lift_doors_opened"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evtE" org.eventb.core.identifier="total_times_lift_doors_opened_per_lift"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evtF" org.eventb.core.identifier="total_times_floor_doors_opened"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="evtG" org.eventb.core.identifier="total_times_floor_doors_opened_per_floor"/>
+<org.eventb.core.invariant name="evtH" org.eventb.core.label="inv6" org.eventb.core.predicate="total_times_lift_doors_opened ∈ ℕ "/>
+<org.eventb.core.invariant name="evtI" org.eventb.core.label="inv7" org.eventb.core.predicate="total_times_lift_doors_opened_per_lift ∈ LIFTS → ℕ "/>
+<org.eventb.core.invariant name="evtJ" org.eventb.core.label="inv8" org.eventb.core.predicate="total_times_floor_doors_opened ∈ ℕ "/>
+<org.eventb.core.invariant name="evtK" org.eventb.core.label="inv9" org.eventb.core.predicate="total_times_floor_doors_opened_per_floor ∈ FLOORS → ℕ"/>
 </org.eventb.core.machineFile>

@@ -30,6 +30,6 @@
 <org.eventb.core.psStatus name="deactivate_lift_button/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="288" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="activate_floor_button/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="281" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="activate_floor_button/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="281" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="deactivate_floor_button/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="289" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="deactivate_floor_button/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="289" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="290" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="deactivate_floor_button/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="290" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

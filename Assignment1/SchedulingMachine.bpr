@@ -12788,29 +12788,30 @@
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p41" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p44" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p47"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p48"/>
-<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p49"/>
-<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p50"/>
-<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p51"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p43"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p45" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p47"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p48"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p49"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p50"/>
+<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p51"/>
+<org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p52"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p42" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p52"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p43" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p53,p54"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p45" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p55"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p46" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p56"/>
-<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p47" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p57"/>
-<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p48" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
-<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p49" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59"/>
-<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p50" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p60"/>
-<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p51" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p61"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p42" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p53"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p44" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54,p55"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p46" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p56"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p47" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p57"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p48" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p49" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p50" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p60"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p51" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p61"/>
+<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p52" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p62"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with floor_buttons_states(floor)(direction)=ACTIVE" org.eventb.core.prHyps="p0">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p62"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p63"/>
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p63"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p64"/>
 <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p13,p14"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -12848,7 +12849,7 @@
 <org.eventb.core.prIdent name="direction" org.eventb.core.type="LIFT_DIRECTIONS"/>
 <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="floor_buttons_states" org.eventb.core.type="ℙ(ℤ×ℙ(LIFT_DIRECTIONS×BUTTON_STATES))"/>
-<org.eventb.core.prPred name="p49" org.eventb.core.predicate="⊤∧(∀lift⦂LIFTS·lift_current_floor(lift)=floor)⇒(∃lift⦂LIFTS·direction=lift_movement_directions(lift)∧(⊤∧(∀lift_door⦂LIFT_DOORS·LIFT_OF_DOOR(lift_door)=lift)⇒(∃lift_door⦂LIFT_DOORS·lift_door_states(lift_door)=OPENED∧(⊤∧(∀floor_door⦂FLOOR_DOORS·LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door)⇒(∃floor_door⦂FLOOR_DOORS·floor_door_states(floor_door)=OPENED∧FLOOR_OF_DOOR(floor_door)=lift_current_floor(lift))))))">
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="⊤∧(∀lift⦂LIFTS·lift_current_floor(lift)=floor)⇒(∃lift⦂LIFTS·direction=lift_movement_directions(lift)∧(⊤∧(∀lift_door⦂LIFT_DOORS·LIFT_OF_DOOR(lift_door)=lift)⇒(∃lift_door⦂LIFT_DOORS·lift_door_states(lift_door)=OPENED∧(⊤∧(∀floor_door⦂FLOOR_DOORS·LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door)⇒(∃floor_door⦂FLOOR_DOORS·floor_door_states(floor_door)=OPENED∧FLOOR_OF_DOOR(floor_door)=lift_current_floor(lift))))))">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
@@ -12910,11 +12911,11 @@
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p45" org.eventb.core.predicate="finite({lift⦂LIFTS·⊤∧lift_current_floor(lift)=floor ∣ lift})">
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="finite({lift⦂LIFTS·⊤∧lift_current_floor(lift)=floor ∣ lift})">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="∀lift⦂LIFTS·lift∈dom(lift_request_pool)⇒¬lift_states(lift)=IDLE">
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="∀lift⦂LIFTS·lift∈dom(lift_request_pool)⇒¬lift_states(lift)=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -12927,14 +12928,14 @@
 <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="LIFT_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p61" org.eventb.core.predicate="∃lift⦂LIFTS·lift_current_floor(lift)=floor">
+<org.eventb.core.prPred name="p62" org.eventb.core.predicate="∃lift⦂LIFTS·lift_current_floor(lift)=floor">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬ACTIVE=INACTIVE">
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p56" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door_states(lift_door)=OPENED⇒¬lift_states(LIFT_OF_DOOR(lift_door))=MOVING">
+<org.eventb.core.prPred name="p57" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door_states(lift_door)=OPENED⇒¬lift_states(LIFT_OF_DOOR(lift_door))=MOVING">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_DOORS" org.eventb.core.type="ℙ(LIFT_DOORS)"/>
@@ -12945,11 +12946,11 @@
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p43" org.eventb.core.predicate="∀lift⦂LIFTS·⊤⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ">
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="∀lift⦂LIFTS·⊤⇒lift∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p44" org.eventb.core.predicate="finite({lift⦂LIFTS·lift∈LIFTS∧lift_current_floor(lift)=floor ∣ lift})">
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="finite({lift⦂LIFTS·lift∈LIFTS∧lift_current_floor(lift)=floor ∣ lift})">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
@@ -12963,7 +12964,7 @@
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="BUTTON_STATES={ACTIVE,INACTIVE}">
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p57" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧¬lift_states(LIFT_OF_FLOOR_DOOR(floor_door))=MOVING">
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧¬lift_states(LIFT_OF_FLOOR_DOOR(floor_door))=MOVING">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
@@ -13007,7 +13008,7 @@
 <org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p60" org.eventb.core.predicate="∀lift⦂LIFTS·lift_current_floor(lift)=floor⇒lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(direction=lift_movement_directions(lift)⇒(∀lift_door⦂LIFT_DOORS·lift_door∈dom(LIFT_OF_DOOR))∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS∧(∀lift_door⦂LIFT_DOORS·LIFT_OF_DOOR(lift_door)=lift⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES∧(lift_door_states(lift_door)=OPENED⇒(∀floor_door⦂FLOOR_DOORS·floor_door∈dom(LIFT_DOOR_OF_FLOOR_DOOR))∧LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFT_DOORS∧(∀floor_door⦂FLOOR_DOORS·LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES∧(floor_door_states(floor_door)=OPENED⇒floor_door∈dom(FLOOR_OF_DOOR)∧FLOOR_OF_DOOR∈FLOOR_DOORS ⇸ ℤ)))))">
+<org.eventb.core.prPred name="p61" org.eventb.core.predicate="∀lift⦂LIFTS·lift_current_floor(lift)=floor⇒lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(direction=lift_movement_directions(lift)⇒(∀lift_door⦂LIFT_DOORS·lift_door∈dom(LIFT_OF_DOOR))∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS∧(∀lift_door⦂LIFT_DOORS·LIFT_OF_DOOR(lift_door)=lift⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES∧(lift_door_states(lift_door)=OPENED⇒(∀floor_door⦂FLOOR_DOORS·floor_door∈dom(LIFT_DOOR_OF_FLOOR_DOOR))∧LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFT_DOORS∧(∀floor_door⦂FLOOR_DOORS·LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES∧(floor_door_states(floor_door)=OPENED⇒floor_door∈dom(FLOOR_OF_DOOR)∧FLOOR_OF_DOOR∈FLOOR_DOORS ⇸ ℤ)))))">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
@@ -13021,7 +13022,7 @@
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_movement_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p62" org.eventb.core.predicate="BUTTON_STATES={floor_buttons_states(floor)(direction),INACTIVE}">
+<org.eventb.core.prPred name="p63" org.eventb.core.predicate="BUTTON_STATES={floor_buttons_states(floor)(direction),INACTIVE}">
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})">
@@ -13050,7 +13051,7 @@
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_movement_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="finite({lift⦂LIFTS·lift_current_floor(lift)=floor ∣ lift})">
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="finite({lift⦂LIFTS·lift_current_floor(lift)=floor ∣ lift})">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
@@ -13074,11 +13075,11 @@
 <org.eventb.core.prIdent name="LIFT_OF_DOOR" org.eventb.core.type="ℙ(LIFT_DOORS×LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_OF_FLOOR_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×LIFTS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p51" org.eventb.core.predicate="∃lift⦂LIFTS·⊤∧lift_current_floor(lift)=floor">
+<org.eventb.core.prPred name="p52" org.eventb.core.predicate="∃lift⦂LIFTS·⊤∧lift_current_floor(lift)=floor">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="(∀lift⦂LIFTS·lift_current_floor(lift)=floor)⇒(∃lift⦂LIFTS·direction=lift_movement_directions(lift)∧((∀lift_door⦂LIFT_DOORS·LIFT_OF_DOOR(lift_door)=lift)⇒(∃lift_door⦂LIFT_DOORS·lift_door_states(lift_door)=OPENED∧((∀floor_door⦂FLOOR_DOORS·LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door)⇒(∃floor_door⦂FLOOR_DOORS·floor_door_states(floor_door)=OPENED∧FLOOR_OF_DOOR(floor_door)=lift_current_floor(lift))))))">
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="(∀lift⦂LIFTS·lift_current_floor(lift)=floor)⇒(∃lift⦂LIFTS·direction=lift_movement_directions(lift)∧((∀lift_door⦂LIFT_DOORS·LIFT_OF_DOOR(lift_door)=lift)⇒(∃lift_door⦂LIFT_DOORS·lift_door_states(lift_door)=OPENED∧((∀floor_door⦂FLOOR_DOORS·LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door)⇒(∃floor_door⦂FLOOR_DOORS·floor_door_states(floor_door)=OPENED∧FLOOR_OF_DOOR(floor_door)=lift_current_floor(lift))))))">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
@@ -13092,7 +13093,7 @@
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_movement_directions" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p50" org.eventb.core.predicate="∀lift⦂LIFTS·⊤∧lift_current_floor(lift)=floor⇒lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(direction=lift_movement_directions(lift)⇒(∀lift_door⦂LIFT_DOORS·⊤⇒lift_door∈dom(LIFT_OF_DOOR)∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS)∧(∀lift_door⦂LIFT_DOORS·⊤∧LIFT_OF_DOOR(lift_door)=lift⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES∧(lift_door_states(lift_door)=OPENED⇒(∀floor_door⦂FLOOR_DOORS·⊤⇒floor_door∈dom(LIFT_DOOR_OF_FLOOR_DOOR)∧LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFT_DOORS)∧(∀floor_door⦂FLOOR_DOORS·⊤∧LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES∧(floor_door_states(floor_door)=OPENED⇒floor_door∈dom(FLOOR_OF_DOOR)∧FLOOR_OF_DOOR∈FLOOR_DOORS ⇸ ℤ)))))">
+<org.eventb.core.prPred name="p51" org.eventb.core.predicate="∀lift⦂LIFTS·⊤∧lift_current_floor(lift)=floor⇒lift∈dom(lift_movement_directions)∧lift_movement_directions∈LIFTS ⇸ LIFT_DIRECTIONS∧(direction=lift_movement_directions(lift)⇒(∀lift_door⦂LIFT_DOORS·⊤⇒lift_door∈dom(LIFT_OF_DOOR)∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS)∧(∀lift_door⦂LIFT_DOORS·⊤∧LIFT_OF_DOOR(lift_door)=lift⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES∧(lift_door_states(lift_door)=OPENED⇒(∀floor_door⦂FLOOR_DOORS·⊤⇒floor_door∈dom(LIFT_DOOR_OF_FLOOR_DOOR)∧LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFT_DOORS)∧(∀floor_door⦂FLOOR_DOORS·⊤∧LIFT_DOOR_OF_FLOOR_DOOR(floor_door)=lift_door⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES∧(floor_door_states(floor_door)=OPENED⇒floor_door∈dom(FLOOR_OF_DOOR)∧FLOOR_OF_DOOR∈FLOOR_DOORS ⇸ ℤ)))))">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
@@ -13113,13 +13114,14 @@
 <org.eventb.core.prIdent name="floor_request_pool" org.eventb.core.type="ℙ(ℤ×LIFT_DIRECTIONS)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="direction∈LIFT_DIRECTIONS"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="finite({lift⦂LIFTS·lift_states(lift)≠IDLE ∣ lift})">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p53" org.eventb.core.predicate="∀lift⦂LIFTS·lift∈dom(lift_current_floor)">
+<org.eventb.core.prPred name="p54" org.eventb.core.predicate="∀lift⦂LIFTS·lift∈dom(lift_current_floor)">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
@@ -13143,7 +13145,7 @@
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p52" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·LIFT_OF_FLOOR_DOOR(floor_door)=LIFT_OF_DOOR(LIFT_DOOR_OF_FLOOR_DOOR(floor_door))">
+<org.eventb.core.prPred name="p53" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·LIFT_OF_FLOOR_DOOR(floor_door)=LIFT_OF_DOOR(LIFT_DOOR_OF_FLOOR_DOOR(floor_door))">
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_DOORS" org.eventb.core.type="ℙ(LIFT_DOORS)"/>
@@ -13151,7 +13153,7 @@
 <org.eventb.core.prIdent name="LIFT_OF_DOOR" org.eventb.core.type="ℙ(LIFT_DOORS×LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_OF_FLOOR_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×LIFTS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p46" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·⊤∧lift_door_states(lift_door)=OPENED⇒¬lift_states(LIFT_OF_DOOR(lift_door))=MOVING">
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·⊤∧lift_door_states(lift_door)=OPENED⇒¬lift_states(LIFT_OF_DOOR(lift_door))=MOVING">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_DOORS" org.eventb.core.type="ℙ(LIFT_DOORS)"/>
@@ -13162,7 +13164,7 @@
 <org.eventb.core.prIdent name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p47" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·⊤∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧¬lift_states(LIFT_OF_FLOOR_DOOR(floor_door))=MOVING">
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·⊤∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧¬lift_states(LIFT_OF_FLOOR_DOOR(floor_door))=MOVING">
 <org.eventb.core.prIdent name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
 <org.eventb.core.prIdent name="FLOOR_DOORS" org.eventb.core.type="ℙ(FLOOR_DOORS)"/>
 <org.eventb.core.prIdent name="FLOOR_OF_DOOR" org.eventb.core.type="ℙ(FLOOR_DOORS×ℤ)"/>
@@ -13241,14 +13243,14 @@
 <org.eventb.core.prIdent name="floor_request_pool" org.eventb.core.type="ℙ(ℤ×LIFT_DIRECTIONS)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p48" org.eventb.core.predicate="∀lift⦂LIFTS·⊤∧lift∈dom(lift_request_pool)⇒¬lift_states(lift)=IDLE">
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="∀lift⦂LIFTS·⊤∧lift∈dom(lift_request_pool)⇒¬lift_states(lift)=IDLE">
 <org.eventb.core.prIdent name="IDLE" org.eventb.core.type="LIFT_STATES"/>
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
 <org.eventb.core.prIdent name="lift_request_pool" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.prIdent name="lift_states" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p54" org.eventb.core.predicate="lift_current_floor∈LIFTS ⇸ ℤ">
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="lift_current_floor∈LIFTS ⇸ ℤ">
 <org.eventb.core.prIdent name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.prIdent name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 </org.eventb.core.prPred>
@@ -13296,7 +13298,7 @@
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(BUTTON_STATES,{ACTIVE},{INACTIVE})">
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p63" org.eventb.core.predicate="¬floor_buttons_states(floor)(direction)=INACTIVE">
+<org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬floor_buttons_states(floor)(direction)=INACTIVE">
 <org.eventb.core.prIdent name="INACTIVE" org.eventb.core.type="BUTTON_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>

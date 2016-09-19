@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="5">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -26,13 +26,13 @@
 <org.eventb.core.poIdentifier name="OPENED" org.eventb.core.type="DOOR_STATES"/>
 <org.eventb.core.poIdentifier name="OPPOSITE_SIDE" org.eventb.core.type="ℙ(DOOR_SIDES×DOOR_SIDES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FRONT∈dom(OPPOSITE_SIDE)∧OPPOSITE_SIDE∈DOOR_SIDES ⇸ DOOR_SIDES" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexy"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="axm7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="axm7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexz"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BACK∈dom(OPPOSITE_SIDE)∧OPPOSITE_SIDE∈DOOR_SIDES ⇸ DOOR_SIDES" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
@@ -48,7 +48,7 @@
 <org.eventb.core.poPredicateSet name="HYPBaseLiftContexz" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexy" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="OPPOSITE_SIDE(FRONT)=BACK" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexz" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexz" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="OPPOSITE_SIDE(BACK)=FRONT" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

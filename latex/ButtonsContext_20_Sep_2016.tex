@@ -1,0 +1,32 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of ButtonsContext}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{ButtonsContext}{20Sep2016}{01:37:43 AM}
+\CONTEXT{ButtonsContext}
+\EXTENDS{DoorsContext}
+\SETS
+	\begin{description}
+		\Item{ BUTTONS }
+		\Item{ BUTTON\_STATES }
+	\end{description}
+\CONSTANTS
+	\begin{description}
+		\Item{ ACTIVE }
+		\Item{ INACTIVE }
+	\end{description}
+\AXIOMS
+	\begin{description}
+		\nItem{ axm1 }{ finite(BUTTONS) }		\nItem{ axm2 }{ partition(BUTTON\_STATES, \{ ACTIVE\} , \{ INACTIVE\} ) }	\end{description}
+\END
+\end{description}
+\end{document}

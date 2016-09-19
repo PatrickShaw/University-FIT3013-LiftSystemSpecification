@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of SchedulingContext}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{SchedulingContext}{20Sep2016}{01:37:43 AM}
+\CONTEXT{SchedulingContext}
+\EXTENDS{ButtonsContext}
+\CONSTANTS
+	\begin{description}
+		\Item{ LIFT\_PRIORITIES }
+	\end{description}
+\AXIOMS
+	\begin{description}
+		\nItem{ axm1 }{ LIFT\_PRIORITIES \in  LIFTS \tbij  1\upto card(LIFTS) }		\nItem{ axm2 }{ finite(LIFT\_PRIORITIES) }	\end{description}
+\END
+\end{description}
+\end{document}

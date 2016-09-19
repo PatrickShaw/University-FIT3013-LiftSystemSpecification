@@ -1,0 +1,36 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of DoorsContext}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{DoorsContext}{20Sep2016}{01:37:43 AM}
+\CONTEXT{DoorsContext}
+\EXTENDS{BaseLiftContext}
+\SETS
+	\begin{description}
+		\Item{ DOOR\_STATES }
+		\Item{ DOOR\_SIDES }
+	\end{description}
+\CONSTANTS
+	\begin{description}
+		\Item{ OPENED }
+		\Item{ CLOSED }
+		\Item{ FRONT }
+		\Item{ BACK }
+		\Item{ IS\_DISABLED\_DOOR }
+		\Item{ OPPOSITE\_SIDE }
+	\end{description}
+\AXIOMS
+	\begin{description}
+		\nItem{ axm1 }{ partition(DOOR\_STATES, \{ OPENED\} , \{ CLOSED\} ) }		\nItem{ axm2 }{ partition(DOOR\_SIDES, \{ FRONT\} , \{ BACK\} ) }		\nItem{ axm3 }{ IS\_DISABLED\_DOOR \in  LIFTS \tfun  (FLOORS \tfun  (DOOR\_SIDES \tfun  BOOL)) }		\nItem{ axm4 }{ finite(IS\_DISABLED\_DOOR) }		\nItem{ axm5 }{ OPPOSITE\_SIDE \in  DOOR\_SIDES \tfun  DOOR\_SIDES }		\nItem{ axm6 }{ OPPOSITE\_SIDE(FRONT) = BACK }		\nItem{ axm7 }{ OPPOSITE\_SIDE(BACK) = FRONT }	\end{description}
+\END
+\end{description}
+\end{document}

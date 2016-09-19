@@ -1,0 +1,405 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of SchedulingMachine}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{SchedulingMachine}{20Sep2016}{01:37:43 AM}
+\MACHINE{SchedulingMachine}
+\REFINES{ButtonsMachine}
+\SEES{SchedulingContext}
+\VARIABLES
+	\begin{description}
+		\Item{ lift\_states }
+		\Item{ lift\_movement\_directions }
+		\Item{ lift\_door\_states }
+		\Item{ floor\_doors\_states }
+		\Item{ lift\_buttons\_states }
+		\Item{ lift\_current\_floor }
+		\Item{ floor\_buttons\_states }
+		\Item{ lift\_request\_pool }
+		\Item{ floor\_request\_pool }
+		\Item{ total\_distance\_travelled }
+		\Item{ total\_distance\_travelled\_per\_lift }
+		\Item{ total\_times\_lift\_doors\_opened }
+		\Item{ total\_times\_lift\_doors\_opened\_per\_lift }
+		\Item{ total\_times\_floor\_doors\_opened }
+		\Item{ total\_times\_floor\_doors\_opened\_per\_floor }
+		\Item{ total\_times\_floor\_door\_opened }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItemY{ inv1 }{ lift\_request\_pool \in  LIFTS \rel  FLOORS }{ 		\\\hspace*{1.4 cm}  Mapping for each lift, to some destination floor }
+		\nItem{ inv2 }{ floor\_request\_pool \in  FLOORS \rel  LIFT\_DIRECTIONS }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\\\textit{extended}
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_states :=  LIFTS \cprod  \{ IDLE\}  }
+			\nItemX{ act2 }{ lift\_movement\_directions :=  LIFTS \cprod  \{ UP\}  }
+			\nItemX{ act3 }{ lift\_current\_floor :=  LIFTS \cprod  \{ 0\}  }
+			\nItemX{ act12 }{ total\_distance\_travelled :=  0 }
+			\nItemX{ act13 }{ total\_distance\_travelled\_per\_lift :=  LIFTS \cprod  \{ 0\}  }
+			\nItemX{ act6 }{ lift\_door\_states :=  LIFTS \cprod  \{ DOOR\_SIDES \cprod  \{ CLOSED\} \}  }
+			\nItemXY{ act7 }{ floor\_doors\_states :=  LIFTS \cprod  \{ FLOORS \cprod  \{ DOOR\_SIDES \cprod  \{ CLOSED\} \} \}  }{ 		\\\hspace*{1.4 cm}  I have no idea how to initialise this }
+			\nItemX{ act14 }{ total\_times\_lift\_doors\_opened :=  0 }
+			\nItemX{ act15 }{ total\_times\_lift\_doors\_opened\_per\_lift :=  LIFTS \cprod  \{ 0\}  }
+			\nItemX{ act16 }{ total\_times\_floor\_doors\_opened :=  0 }
+			\nItemX{ act17 }{ total\_times\_floor\_doors\_opened\_per\_floor :=  FLOORS \cprod  \{ 0\}  }
+			\nItemX{ act18 }{ total\_times\_floor\_door\_opened :=  LIFTS \cprod  \{ FLOORS \cprod  \{ 0\} \}  }
+			\nItemX{ act8 }{ lift\_buttons\_states :=  LIFTS \cprod  \{ FLOORS \cprod  \{ INACTIVE\} \}  }
+			\nItemX{ act9 }{ floor\_buttons\_states :=  FLOORS \cprod  \{ LIFT\_DIRECTIONS \cprod  \{ INACTIVE\} \}  }
+			\nItem{ act10 }{ lift\_request\_pool :=  \emptyset  }
+			\nItem{ act11 }{ floor\_request\_pool :=  \emptyset  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {activate\_lift}
+	\EXTD {activate\_lift}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift\_states(lift) = IDLE }
+			\nItemY{ grd2 }{ lift \in  dom(lift\_request\_pool) }{		\\\hspace*{1.4 cm}  Only allow activating a lift if it has a request assigned to it } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_states(lift) :=  STOPPED }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {deactivate\_lift}
+	\EXTD {deactivate\_lift}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift\_states(lift) = STOPPED }
+			\nItemY{ grd2 }{ lift \notin  dom(lift\_request\_pool) }{		\\\hspace*{1.4 cm}  Only allow deactivating a lift if it doesn't have anything to do } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_states(lift) :=  IDLE }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {start\_lift}
+	\EXTD {start\_lift}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift\_states(lift) = STOPPED }
+			\nItemX{ grd2 }{ lift\_movement\_directions(lift) = UP \limp  lift\_current\_floor(lift) <  TOP\_FLOOR }
+			\nItemX{ grd3 }{ lift\_movement\_directions(lift) = DOWN \limp  lift\_current\_floor(lift) >  0 }
+			\nItemX{ grd4 }{ \forall side\qdot side \in  DOOR\_SIDES \limp  lift\_door\_states(lift)(side) = CLOSED }
+			\nItemX{ grd5 }{ \forall side\qdot side \in  DOOR\_SIDES \limp  floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = CLOSED }
+			\nItemY{ grd6 }{ lift \in  dom(lift\_request\_pool) }{		\\\hspace*{1.4 cm}  Only allow starting a lift if it has a service request to fullfill } 
+			\nItemY{ grd7 }{ lift \mapsto  lift\_current\_floor(lift) \notin  lift\_request\_pool }{		\\\hspace*{1.4 cm}  Disallow starting if the current floor is apart of a service request } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_states(lift) :=  MOVING }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {stop\_lift}
+	\EXTD {stop\_lift}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift\_states(lift) = MOVING }
+			\nItemY{ grd2 }{ lift \notin  dom(lift\_request\_pool) \lor 		\\\hspace*{1.2 cm}  lift\_current\_floor(lift) \in  ran(\{ lift\}  \domres  lift\_request\_pool) \lor  (		\\\hspace*{1.6 cm}  (lift\_movement\_directions(lift) = UP \limp  lift\_current\_floor(lift) = TOP\_FLOOR) \land 		\\\hspace*{1.6 cm}  (lift\_movement\_directions(lift) = DOWN \limp  lift\_current\_floor(lift) = 0)		\\\hspace*{1.2 cm}  ) }{		\\\hspace*{1.4 cm}  Only stop the lift if it's not servicing a request (or if it reaches the top or bottom floors) } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_states(lift) :=  STOPPED }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {move\_lift}
+	\EXTD {move\_lift}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift\_states(lift) = MOVING }
+			\nItemX{ grd4 }{ 0 \leq  lift\_current\_floor(lift) + \{ UP \mapsto  1, DOWN \mapsto  - 1\} (lift\_movement\_directions(lift)) }
+			\nItemX{ grd5 }{ TOP\_FLOOR \geq  lift\_current\_floor(lift) + \{ UP \mapsto  1, DOWN \mapsto  - 1\} (lift\_movement\_directions(lift)) }
+			\nItemX{ grd7 }{ \forall side\qdot side \in  DOOR\_SIDES \limp  lift\_door\_states(lift)(side) = CLOSED }
+			\nItemX{ grd9 }{ \forall side\qdot side \in  DOOR\_SIDES \limp  floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = CLOSED }
+			\nItemXY{ grd8 }{ \forall floor\qdot floor \in  FLOORS \limp  (\forall side\qdot side \in  DOOR\_SIDES \limp  floor\_doors\_states(lift)(floor)(side) = CLOSED) }{		\\\hspace*{1.4 cm}  The floor doors for the lift should be closed if the lift is moving to another floor } 
+			\nItemY{ {\it grd10} }{ lift \in  dom(lift\_request\_pool) }{		\\\hspace*{1.6 cm}  Only allow movement if a lift has a service request } 
+			\nItemY{ grd11 }{ lift \mapsto  lift\_current\_floor(lift) \notin  lift\_request\_pool }{		\\\hspace*{1.6 cm}  If a lift is currently serving a request, then disallow movement if it's current floor is a target } 
+			\nItemY{ grd12 }{ lift\_movement\_directions(lift) = UP \limp  (\exists x\qdot x \in  ran(\{ lift\}  \domres  lift\_request\_pool) \land  lift\_current\_floor(lift) <  x) }{		\\\hspace*{1.6 cm}  If the lifts direction is up, then there must be a target floor above the lift for it to move } 
+			\nItemY{ grd13 }{ lift\_movement\_directions(lift) = DOWN \limp  (\exists x\qdot x \in  ran(\{ lift\}  \domres  lift\_request\_pool) \land  lift\_current\_floor(lift) >  x) }{		\\\hspace*{1.6 cm}  Otherwise if the lifts direction is down, then there must be a target floor below the lift for it to move } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_current\_floor(lift) :=  lift\_current\_floor(lift) + \{ UP \mapsto  1, DOWN \mapsto  - 1\} (lift\_movement\_directions(lift)) }
+			\nItemX{ act2 }{ total\_distance\_travelled :=  total\_distance\_travelled + 1 }
+			\nItemX{ act3 }{ total\_distance\_travelled\_per\_lift(lift) :=  total\_distance\_travelled\_per\_lift(lift) + 1 }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {change\_lift\_direction}
+	\EXTD {change\_lift\_direction}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift \in  LIFTS }
+			\nItemX{ grd2 }{ lift\_states(lift) \neq  MOVING }
+			\nItemXY{ grd3 }{ lift\_movement\_directions(lift) \neq  DOWN \limp  lift\_current\_floor(lift) >  0 }{		\\\hspace*{1.4 cm}  Lift cannot change direction to down if already on the bottom floor } 
+			\nItemXY{ grd4 }{ lift\_movement\_directions(lift) \neq  UP \limp  lift\_current\_floor(lift) <  TOP\_FLOOR }{		\\\hspace*{1.4 cm}  Lift cannot change direction to up if already on the top floor } 
+			\nItemY{ grd5 }{ lift\_movement\_directions(lift) = UP \limp  (\forall x\qdot x \in  ran(\{ lift\}  \domres  lift\_request\_pool) \limp  lift\_current\_floor(lift) >  x) }{		\\\hspace*{1.4 cm}  If the lift is going up, then only change direction when every lift request is below the lift } 
+			\nItemY{ grd6 }{ lift\_movement\_directions(lift) = DOWN \limp  (\forall x\qdot x \in  ran(\{ lift\}  \domres  lift\_request\_pool) \limp  lift\_current\_floor(lift) <  x) }{		\\\hspace*{1.4 cm}  If the lift is going down, then only change direction when every lift request is above the lift } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_movement\_directions(lift) :=  \{ UP \mapsto  DOWN, DOWN \mapsto  UP\} (lift\_movement\_directions(lift)) }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {open\_lift\_door}
+	\EXTD {open\_lift\_door}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\ItemX{side }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift \in  LIFTS }
+			\nItemX{ grd2 }{ side \in  DOOR\_SIDES }
+			\nItemX{ grd3 }{ lift\_states(lift) \in  \{ STOPPED, IDLE\}  }
+			\nItemX{ grd4 }{ lift\_door\_states(lift)(side) = CLOSED }
+			\nItemXY{ grd5 }{ floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = CLOSED }{		\\\hspace*{1.4 cm}  This also prevents lift from open a side that is disabled } 
+			\nItemX{ grd6 }{ IS\_DISABLED\_DOOR(lift)(lift\_current\_floor(lift))(side) = FALSE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_door\_states(lift) :=  lift\_door\_states(lift) \ovl  \{ side \mapsto  OPENED\}  }
+			\nItemX{ act10 }{ total\_times\_lift\_doors\_opened :=  total\_times\_lift\_doors\_opened + 1 }
+			\nItemX{ act11 }{ total\_times\_lift\_doors\_opened\_per\_lift(lift) :=  total\_times\_lift\_doors\_opened\_per\_lift(lift) + 1 }
+			\nItemX{ act2 }{ lift\_buttons\_states(lift) :=  lift\_buttons\_states(lift) \ovl  \{ lift\_current\_floor(lift) \mapsto  INACTIVE\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {close\_lift\_door}
+	\EXTD {close\_lift\_door}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\ItemX{side }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift \in  LIFTS }
+			\nItemX{ grd2 }{ side \in  DOOR\_SIDES }
+			\nItemX{ grd3 }{ lift\_states(lift) \in  \{ STOPPED, IDLE\}  }
+			\nItemX{ grd4 }{ lift\_door\_states(lift)(side) = OPENED }
+			\nItemX{ grd5 }{ floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = CLOSED }
+			\nItemX{ grd6 }{ IS\_DISABLED\_DOOR(lift)(lift\_current\_floor(lift))(side) = FALSE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_door\_states(lift) :=  lift\_door\_states(lift) \ovl  \{ side \mapsto  CLOSED\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {open\_floor\_door}\cmt{		\\\hspace*{3.6 cm}  Open the door and deactivate all requests that were associated with the floor }
+	\EXTD {open\_floor\_door}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\ItemX{side }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift \in  LIFTS }
+			\nItemX{ grd2 }{ side \in  DOOR\_SIDES }
+			\nItemX{ grd3 }{ lift\_states(lift) \in  \{ STOPPED, IDLE\}  }
+			\nItemX{ grd4 }{ lift\_door\_states(lift)(side) = OPENED }
+			\nItemX{ grd5 }{ floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = CLOSED }
+			\nItemX{ grd6 }{ IS\_DISABLED\_DOOR(lift)(lift\_current\_floor(lift))(side) = FALSE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ floor\_doors\_states(lift) :=  floor\_doors\_states(lift) \ovl  \{ lift\_current\_floor(lift) \mapsto  \{ side \mapsto  OPENED, OPPOSITE\_SIDE(side) \mapsto  floor\_doors\_states(lift)(lift\_current\_floor(lift))(OPPOSITE\_SIDE(side))\} \}  }
+			\nItemX{ act10 }{ total\_times\_floor\_doors\_opened :=  total\_times\_floor\_doors\_opened + 1 }
+			\nItemX{ act11 }{ total\_times\_floor\_doors\_opened\_per\_floor(lift\_current\_floor(lift)) :=  total\_times\_floor\_doors\_opened\_per\_floor(lift\_current\_floor(lift)) + 1 }
+			\nItemX{ act12 }{ total\_times\_floor\_door\_opened(lift) :=  total\_times\_floor\_door\_opened(lift) \ovl  \{ lift\_current\_floor(lift)\mapsto (total\_times\_floor\_door\_opened(lift)(lift\_current\_floor(lift)) + 1)\}  }
+			\nItem{ act3 }{ lift\_request\_pool :=  lift\_request\_pool \setminus  \{ lift \mapsto  lift\_current\_floor(lift)\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {close\_floor\_door}
+	\EXTD {close\_floor\_door}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{lift }
+			\ItemX{side }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ lift \in  LIFTS }
+			\nItemX{ grd2 }{ side \in  DOOR\_SIDES }
+			\nItemX{ grd3 }{ lift\_states(lift) \in  \{ STOPPED, IDLE\}  }
+			\nItemX{ grd4 }{ lift\_door\_states(lift)(side) = OPENED }
+			\nItemX{ grd5 }{ floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = OPENED }
+			\nItemX{ grd6 }{ IS\_DISABLED\_DOOR(lift)(lift\_current\_floor(lift))(side) = FALSE }
+			\nItemY{ grd20000 }{ lift\_buttons\_states(lift)(lift\_current\_floor(lift)) = INACTIVE }{		\\\hspace*{2.2 cm}  Only alow closing the door if the button for that floor has been deactivated } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ floor\_doors\_states(lift) :=  floor\_doors\_states(lift) \ovl  \{ lift\_current\_floor(lift) \mapsto  \{ side \mapsto  CLOSED, OPPOSITE\_SIDE(side) \mapsto  floor\_doors\_states(lift)(lift\_current\_floor(lift))(OPPOSITE\_SIDE(side))\} \}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {activate\_lift\_button}
+	\EXTD {activate\_lift\_button}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{floor }
+			\ItemX{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ floor \in  FLOORS }
+			\nItemX{ grd2 }{ lift \in  LIFTS }
+			\nItemX{ grd3 }{ lift\_buttons\_states(lift)(floor) = INACTIVE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_buttons\_states(lift) :=  lift\_buttons\_states(lift) \ovl  \{ floor \mapsto  ACTIVE\}  }
+			\nItem{ act2 }{ lift\_request\_pool :=  (lift\_request\_pool \setminus  \{ lift \mapsto  floor\} ) \bunion  \{ lift \mapsto  floor\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {deactivate\_lift\_button}
+	\EXTD {deactivate\_lift\_button}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemXY{lift }{Once the floor and lift door is open, we can deactive all appropriate buttons }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd2 }{ lift \in  LIFTS }
+			\nItemX{ grd1 }{ lift\_buttons\_states(lift)(lift\_current\_floor(lift)) = ACTIVE }
+			\nItemX{ grd3 }{ \exists side\qdot side \in  DOOR\_SIDES \land  lift\_door\_states(lift)(side) = OPENED \land  floor\_doors\_states(lift)(lift\_current\_floor(lift))(side) = OPENED }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ lift\_buttons\_states(lift) :=  lift\_buttons\_states(lift) \ovl  \{ lift\_current\_floor(lift) \mapsto  INACTIVE\}  }
+			\nItemY{ act2 }{ lift\_request\_pool :=  lift\_request\_pool \setminus  \{ lift \mapsto  lift\_current\_floor(lift)\}  }{ 		\\\hspace*{1.4 cm}  Remove this button call from the request pool }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {activate\_floor\_button}
+	\EXTD {activate\_floor\_button}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{floor }
+			\ItemX{direction }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd1 }{ floor \in  FLOORS }
+			\nItemX{ grd2 }{ direction \in  LIFT\_DIRECTIONS }
+			\nItemX{ grd3 }{ floor\_buttons\_states(floor)(direction) = INACTIVE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ floor\_buttons\_states(floor) :=  floor\_buttons\_states(floor) \ovl  \{ direction \mapsto  ACTIVE\}  }
+			\nItem{ act2 }{ floor\_request\_pool :=  (floor\_request\_pool \setminus  \{ floor \mapsto  direction\} ) \bunion  \{ floor \mapsto  direction\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {deactivate\_floor\_button}
+	\EXTD {deactivate\_floor\_button}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{floor }
+			\ItemX{direction }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd2 }{ floor \in  FLOORS }
+			\nItemX{ grd3 }{ direction \in  LIFT\_DIRECTIONS }
+			\nItemX{ grd1 }{ floor\_buttons\_states(floor)(direction) = ACTIVE }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ floor\_buttons\_states(floor) :=  floor\_buttons\_states(floor) \ovl  \{ direction \mapsto  INACTIVE\}  }
+			\nItem{ act2 }{ floor\_request\_pool :=  floor\_request\_pool \setminus  \{ floor \mapsto  direction\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {assign\_floor\_request\_to\_lift}
+	\EXTD {deactivate\_floor\_button}
+		\begin{description}
+		\AnyPrm
+			\begin{description}
+			\ItemX{floor }
+			\ItemX{direction }
+			\Item{lift }
+			\end{description}
+		\WhereGrd
+			\begin{description}
+			\nItemX{ grd2 }{ floor \in  FLOORS }
+			\nItemX{ grd3 }{ direction \in  LIFT\_DIRECTIONS }
+			\nItemX{ grd1 }{ floor\_buttons\_states(floor)(direction) = ACTIVE }
+			\nItem{ grd4 }{ floor \mapsto  direction \in  floor\_request\_pool }
+			\nItem{ grd5 }{ lift \in  LIFTS }
+			\nItemY{ grd6 }{ LIFT\_PRIORITIES(lift) = max(\{ - 1\}  \bunion  \{ y\qdot y \in  \{ x |  x \in  LIFTS \land 		\\\hspace*{1.6 cm}  (		\\\hspace*{2 cm}  x \notin  dom(lift\_request\_pool) \lor 		\\\hspace*{2 cm}  (		\\\hspace*{2.4 cm}  lift\_movement\_directions(lift) = direction \land 		\\\hspace*{2.4 cm}  (direction = UP \limp  lift\_current\_floor(x) \leq  floor) \land 		\\\hspace*{2.4 cm}  (direction = DOWN \limp  lift\_current\_floor(x) \geq  floor)		\\\hspace*{2 cm}  )		\\\hspace*{1.6 cm}  )\}  \land 		\\\hspace*{1.2 cm}  		\\\hspace*{1.6 cm}  (lift\_current\_floor(y) >  floor \limp  (lift\_current\_floor(y) -  floor = min(\{ x\qdot x \in  LIFTS \land 		\\\hspace*{1.6 cm}  (		\\\hspace*{2 cm}  lift\_current\_floor(x) >  floor \land 		\\\hspace*{2 cm}  (		\\\hspace*{2.4 cm}  x \notin  dom(lift\_request\_pool) \lor 		\\\hspace*{2.4 cm}  (direction = DOWN \land  lift\_movement\_directions(lift) = DOWN)		\\\hspace*{2 cm}  )		\\\hspace*{1.6 cm}  ) |  lift\_current\_floor(x) -  floor\} ))) \land 		\\\hspace*{1.2 cm}  		\\\hspace*{1.6 cm}  (lift\_current\_floor(y) <  floor \limp  (floor -  lift\_current\_floor(y) = min(\{ x\qdot x \in  LIFTS \land 		\\\hspace*{1.6 cm}  (		\\\hspace*{2 cm}  lift\_current\_floor(x) <  floor \land 		\\\hspace*{2 cm}  (		\\\hspace*{2.4 cm}  x \notin  dom(lift\_request\_pool) \lor 		\\\hspace*{2.4 cm}  (direction = UP \land  lift\_movement\_directions(lift) = UP)		\\\hspace*{2 cm}  )		\\\hspace*{1.6 cm}  ) |  floor -  lift\_current\_floor(x)\} )))		\\\hspace*{1.2 cm}  		\\\hspace*{1.2 cm}  |  LIFT\_PRIORITIES(y)\} ) }{		\\\hspace*{1.4 cm}  This monster guard ensures that the lift is		\\\hspace*{1.2 cm}  1. Either idle, or already on it's way to the floor (and moving the same direction)		\\\hspace*{1.2 cm}  2. The closest lift to the floor out of all lifts that satisfy (1)		\\\hspace*{1.2 cm}  3. Of the highest priority out of all lifts that satisfy (1) and (2) } 
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItemX{ act1 }{ floor\_buttons\_states(floor) :=  floor\_buttons\_states(floor) \ovl  \{ direction \mapsto  INACTIVE\}  }
+			\nItem{ act2 }{ floor\_request\_pool :=  floor\_request\_pool \setminus  \{ floor \mapsto  direction\}  }
+			\nItem{ act3 }{ lift\_request\_pool :=  (lift\_request\_pool \setminus  \{ lift \mapsto  floor\} ) \bunion  \{ lift \mapsto  floor\}  }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

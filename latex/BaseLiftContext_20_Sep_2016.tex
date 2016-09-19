@@ -1,0 +1,37 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of BaseLiftContext}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{BaseLiftContext}{20Sep2016}{01:37:43 AM}
+\CONTEXT{BaseLiftContext}
+\SETS
+	\begin{description}
+		\Item{ LIFTS }
+		\Item{ LIFT\_STATES }
+		\Item{ LIFT\_DIRECTIONS }
+	\end{description}
+\CONSTANTS
+	\begin{description}
+		\Item{ FLOORS }
+		\Item{ TOP\_FLOOR }
+		\Item{ MOVING }
+		\Item{ STOPPED }
+		\Item{ IDLE }
+		\Item{ UP }
+		\Item{ DOWN }
+	\end{description}
+\AXIOMS
+	\begin{description}
+		\nItem{ axm5 }{ finite(LIFTS) }		\nItem{ axm4 }{ partition(LIFT\_STATES, \{ MOVING\} , \{ STOPPED\} , \{ IDLE\} ) }		\nItem{ axm6 }{ partition(LIFT\_DIRECTIONS, \{ UP\} , \{ DOWN\} ) }		\nItem{ axm1 }{ TOP\_FLOOR \in  \nat_1 }		\nItem{ axm2 }{ FLOORS = 0\upto TOP\_FLOOR }		\nItem{ axm3 }{ card(FLOORS) = TOP\_FLOOR + 1 }	\end{description}
+\END
+\end{description}
+\end{document}

@@ -83,4 +83,5 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="H" org.eventb.core.identifier="total_times_lift_doors_opened_per_lift"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="I" org.eventb.core.identifier="total_times_floor_doors_opened"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="J" org.eventb.core.identifier="total_times_floor_doors_opened_per_floor"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="K" org.eventb.core.identifier="total_times_floor_door_opened"/>
 </org.eventb.core.machineFile>

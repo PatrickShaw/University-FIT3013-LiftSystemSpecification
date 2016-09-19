@@ -1,53 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="inv5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="start_lift/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="start_lift/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="move_lift/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="move_lift/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="move_lift/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="move_lift/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/inv6/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/inv7/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_lift_door/act11/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_lift_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/inv8/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/inv9/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="open_floor_door/act11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="close_floor_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_lift/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="start_lift/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move_lift/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move_lift/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move_lift/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move_lift/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/inv6/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/inv7/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_lift_door/act11/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_lift_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/inv9/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/act11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="open_floor_door/act12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="close_floor_door/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

@@ -50,7 +50,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="?" org.eventb.core.comment="Open the door and deactivate all requests that were associated with the floor" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="open_floor_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="open_floor_door"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="lift_request_pool ≔ lift_request_pool ∖ {lift ↦ lift_current_floor(lift)}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="lift_request_pool ≔ lift_request_pool ∖ {lift ↦ lift_current_floor(lift)}" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_floor_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_floor_door"/>
@@ -91,4 +91,5 @@
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="W" org.eventb.core.identifier="total_times_lift_doors_opened_per_lift"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="U" org.eventb.core.identifier="total_times_floor_doors_opened"/>
 <org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="V" org.eventb.core.identifier="total_times_floor_doors_opened_per_floor"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="Y" org.eventb.core.identifier="total_times_floor_door_opened"/>
 </org.eventb.core.machineFile>

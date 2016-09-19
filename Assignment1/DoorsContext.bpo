@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="5">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
 <org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -17,11 +17,38 @@
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONW" org.eventb.core.predicate="TOP_FLOOR∈ℕ1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#-"/>
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONX" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#+"/>
 <org.eventb.core.poPredicate name="LIFT_DIRECTIONY" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1" org.eventb.core.source="/Assignment1/BaseLiftContext.buc|org.eventb.core.contextFile#BaseLiftContext|org.eventb.core.axiom#."/>
+<org.eventb.core.poIdentifier name="DOOR_SIDES" org.eventb.core.type="ℙ(DOOR_SIDES)"/>
 <org.eventb.core.poIdentifier name="DOOR_STATES" org.eventb.core.type="ℙ(DOOR_STATES)"/>
+<org.eventb.core.poIdentifier name="BACK" org.eventb.core.type="DOOR_SIDES"/>
 <org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.poIdentifier name="FRONT" org.eventb.core.type="DOOR_SIDES"/>
+<org.eventb.core.poIdentifier name="IS_DISABLED_DOOR" org.eventb.core.type="ℙ(LIFTS×ℙ(ℤ×ℙ(DOOR_SIDES×BOOL)))"/>
 <org.eventb.core.poIdentifier name="OPENED" org.eventb.core.type="DOOR_STATES"/>
+<org.eventb.core.poIdentifier name="OPPOSITE_SIDE" org.eventb.core.type="ℙ(DOOR_SIDES×DOOR_SIDES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FRONT∈dom(OPPOSITE_SIDE)∧OPPOSITE_SIDE∈DOOR_SIDES ⇸ DOOR_SIDES" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexy"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BACK∈dom(OPPOSITE_SIDE)∧OPPOSITE_SIDE∈DOOR_SIDES ⇸ DOOR_SIDES" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPBaseLiftContexy" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(DOOR_STATES,{OPENED},{CLOSED})" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(DOOR_SIDES,{FRONT},{BACK})" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IS_DISABLED_DOOR∈LIFTS → (FLOORS → (DOOR_SIDES → BOOL))" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(IS_DISABLED_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="OPPOSITE_SIDE∈DOOR_SIDES → DOOR_SIDES" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPBaseLiftContexz" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="OPPOSITE_SIDE(FRONT)=BACK" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/DoorsContext.bpo|org.eventb.core.poFile#DoorsContext|org.eventb.core.poPredicateSet#HYPBaseLiftContexz" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="OPPOSITE_SIDE(BACK)=FRONT" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

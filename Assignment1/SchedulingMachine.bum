@@ -54,7 +54,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="close_floor_door">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="close_floor_door"/>
-<org.eventb.core.guard name="(" org.eventb.core.comment="Only alow closing the door if the button for that floor has been deactivated" org.eventb.core.label="grd2" org.eventb.core.predicate="lift_buttons_states(lift)(floor) = INACTIVE"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Only alow closing the door if the button for that floor has been deactivated" org.eventb.core.label="grd20000" org.eventb.core.predicate="lift_buttons_states(lift)(lift_current_floor(lift)) = INACTIVE"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="activate_lift_button">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="activate_lift_button"/>

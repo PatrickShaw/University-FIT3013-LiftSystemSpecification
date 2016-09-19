@@ -5,4 +5,15 @@
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name=")" org.eventb.core.identifier="OPENED"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="*" org.eventb.core.identifier="CLOSED"/>
 <org.eventb.core.axiom name="+" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(DOOR_STATES, {OPENED}, {CLOSED})"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.identifier="DOOR_SIDES"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="-" org.eventb.core.identifier="FRONT"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="." org.eventb.core.identifier="BACK"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(DOOR_SIDES, {FRONT}, {BACK})"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="0" org.eventb.core.identifier="IS_DISABLED_DOOR"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm3" org.eventb.core.predicate="IS_DISABLED_DOOR ∈ LIFTS → (FLOORS → (DOOR_SIDES → BOOL))"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(IS_DISABLED_DOOR)"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="4" org.eventb.core.identifier="OPPOSITE_SIDE"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="axm5" org.eventb.core.predicate="OPPOSITE_SIDE ∈ DOOR_SIDES → DOOR_SIDES"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="axm6" org.eventb.core.predicate="OPPOSITE_SIDE(FRONT) = BACK"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="axm7" org.eventb.core.predicate="OPPOSITE_SIDE(BACK) = FRONT"/>
 </org.eventb.core.contextFile>

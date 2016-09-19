@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="159">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="150">
+<org.eventb.core.poFile org.eventb.core.poStamp="162">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
 <org.eventb.core.poIdentifier name="LIFT_STATES" org.eventb.core.type="ℙ(LIFT_STATES)"/>
@@ -34,16 +34,16 @@
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOU" org.eventb.core.predicate="finite(LIFT_DOORS)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#1"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOV" org.eventb.core.predicate="finite(FLOOR_DOORS)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#2"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOW" org.eventb.core.predicate="LIFT_OF_DOOR∈LIFT_DOORS → LIFTS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#5"/>
-<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOX" org.eventb.core.predicate="FLOOR_OF_DOOR∈FLOOR_DOORS → FLOORS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
-<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOY" org.eventb.core.predicate="LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS → LIFT_DOORS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#:"/>
-<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOZ" org.eventb.core.predicate="finite(LIFT_OF_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOX" org.eventb.core.predicate="finite(LIFT_OF_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#7"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOY" org.eventb.core.predicate="FLOOR_OF_DOOR∈FLOOR_DOORS → FLOORS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOOZ" org.eventb.core.predicate="LIFT_DOOR_OF_FLOOR_DOOR∈FLOOR_DOORS → LIFT_DOORS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#:"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO[" org.eventb.core.predicate="finite(FLOOR_OF_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#8"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO\" org.eventb.core.predicate="finite(LIFT_DOOR_OF_FLOOR_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#;"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO]" org.eventb.core.predicate="LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS → LIFTS" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#A"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO^" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS⇒LIFT_OF_FLOOR_DOOR(floor_door)=LIFT_OF_DOOR(LIFT_DOOR_OF_FLOOR_DOOR(floor_door))" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#@"/>
 <org.eventb.core.poPredicate name="LIFT_DOOR_OF_FLOOR_DOO_" org.eventb.core.predicate="finite(LIFT_OF_FLOOR_DOOR)" org.eventb.core.source="/Assignment1/DoorsContext.buc|org.eventb.core.contextFile#DoorsContext|org.eventb.core.axiom#&gt;"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="150">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="floor_door_states" org.eventb.core.type="ℙ(FLOOR_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="lift_current_floor" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.poIdentifier name="lift_door_states" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
@@ -53,28 +53,28 @@
 <org.eventb.core.poPredicate name="lift_movement_directionu" org.eventb.core.predicate="lift_movement_directions∈LIFTS → LIFT_DIRECTIONS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.invariant#,"/>
 <org.eventb.core.poPredicate name="lift_movement_directionv" org.eventb.core.predicate="lift_current_floor∈LIFTS → FLOORS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·(lift_door∈LIFT_DOORS⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES)∧(lift_door∈LIFT_DOORS∧lift_door_states(lift_door)=OPENED⇒lift_door∈dom(LIFT_OF_DOOR)∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS∧LIFT_OF_DOOR(lift_door)∈dom(lift_states)∧lift_states∈LIFTS ⇸ LIFT_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·(floor_door∈FLOOR_DOORS⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES)∧(floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒floor_door∈dom(FLOOR_OF_DOOR)∧FLOOR_OF_DOOR∈FLOOR_DOORS ⇸ ℤ∧floor_door∈dom(LIFT_OF_FLOOR_DOOR)∧LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFTS∧LIFT_OF_FLOOR_DOOR(floor_door)∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ∧(FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))⇒LIFT_OF_FLOOR_DOOR(floor_door)∈dom(lift_states)∧lift_states∈LIFTS ⇸ LIFT_STATES))" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="157">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="162">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directiont"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT_DOORS × {OPENED}∈LIFT_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT_DOORS × {CLOSED}∈LIFT_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="158">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directiont"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FLOOR_DOORS × {CLOSED}∈FLOOR_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -83,16 +83,16 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="157">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="162">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directiont"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧(LIFT_DOORS × {OPENED})(lift_door)=OPENED⇒(LIFTS × {IDLE})(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧(LIFT_DOORS × {CLOSED})(lift_door)=OPENED⇒(LIFTS × {IDLE})(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="158">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directiont"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧(FLOOR_DOORS × {CLOSED})(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=(LIFTS × {0})(LIFT_OF_FLOOR_DOOR(floor_door))∧(LIFTS × {IDLE})(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -101,15 +101,15 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directiont" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="150">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directiont" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.poIdentifier name="floor_door_states'" org.eventb.core.type="ℙ(FLOOR_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="lift_current_floor'" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.poIdentifier name="lift_door_states'" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="lift_movement_directions'" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directiont" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directiont" org.eventb.core.poStamp="150"/>
-<org.eventb.core.poSequent name="activate_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directiont" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directiont" org.eventb.core.poStamp="161"/>
+<org.eventb.core.poSequent name="activate_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionu"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧lift_door_states(lift_door)=OPENED⇒(lift_states{lift ↦ STOPPED})(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#2"/>
@@ -118,7 +118,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#activate_lift\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="activate_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="activate_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionu"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧(lift_states{lift ↦ STOPPED})(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#2"/>
@@ -127,14 +127,14 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#activate_lift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionu" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionu" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionu" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionu" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionu" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionu" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=IDLE" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#2|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="deactivate_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="deactivate_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧lift_door_states(lift_door)=OPENED⇒(lift_states{lift ↦ IDLE})(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#4"/>
@@ -143,7 +143,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#deactivate_lift\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="deactivate_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="deactivate_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧(lift_states{lift ↦ IDLE})(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#4"/>
@@ -152,27 +152,27 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#deactivate_lift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionv" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionv" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#4|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_states(lift)=STOPPED" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#4|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="start_lift/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="start_lift/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionw("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·(lift_door∈LIFT_DOORS⇒lift_door∈dom(LIFT_OF_DOOR)∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS)∧(lift_door∈LIFT_DOORS∧LIFT_OF_DOOR(lift_door)=lift⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionw("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="start_lift/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="start_lift/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionwlifv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·(floor_door∈FLOOR_DOORS⇒floor_door∈dom(LIFT_OF_FLOOR_DOOR)∧LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFTS)∧(floor_door∈FLOOR_DOORS∧LIFT_OF_FLOOR_DOOR(floor_door)=lift⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#)"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionwlifv"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="start_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="start_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧lift_door_states(lift_door)=OPENED⇒(lift_states{lift ↦ MOVING})(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#1"/>
@@ -181,7 +181,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#start_lift\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="start_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="start_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧(lift_states{lift ↦ MOVING})(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#1"/>
@@ -190,21 +190,21 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#start_lift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionw" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionw" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directionw(" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionw" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directionw(" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionw" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#1|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_states(lift)=STOPPED" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#1|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directionwlifv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionw(" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directionwlifv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionw(" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧LIFT_OF_DOOR(lift_door)=lift⇒lift_door_states(lift_door)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionw" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionwlifv" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionw" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionwlifv" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧LIFT_OF_FLOOR_DOOR(floor_door)=lift⇒floor_door_states(floor_door)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt9|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="stop_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="155">
+<org.eventb.core.poSequent name="stop_lift/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧lift_door_states(lift_door)=OPENED⇒(lift_states{lift ↦ STOPPED})(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#3"/>
@@ -213,7 +213,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#stop_lift\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="stop_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="155">
+<org.eventb.core.poSequent name="stop_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directionx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧(lift_states{lift ↦ STOPPED})(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#3"/>
@@ -222,27 +222,27 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#stop_lift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionx" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionx" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_states'" org.eventb.core.type="ℙ(LIFTS×LIFT_STATES)"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionx" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionx" org.eventb.core.poStamp="155">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionx" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionx" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#3|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_states(lift)=MOVING" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#3|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="move_lift/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="move_lift/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directiony)"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·(lift_door∈LIFT_DOORS⇒lift_door∈dom(LIFT_OF_DOOR)∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS)∧(lift_door∈LIFT_DOORS∧LIFT_OF_DOOR(lift_door)=lift⇒lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directiony)"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="move_lift/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="move_lift/grd9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylifv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·(floor_door∈FLOOR_DOORS⇒floor_door∈dom(LIFT_OF_FLOOR_DOOR)∧LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFTS)∧(floor_door∈FLOOR_DOORS∧LIFT_OF_FLOOR_DOOR(floor_door)=lift⇒floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#*"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylifv"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="move_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="move_lift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_directiony"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=(lift_current_floor{lift ↦ lift_current_floor(lift)+{UP ↦ 1,DOWN ↦ −1}(lift_movement_directions(lift))})(LIFT_OF_FLOOR_DOOR(floor_door))∧lift_states(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/"/>
@@ -251,41 +251,41 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#move_lift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directiony" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directiony" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_current_floor'" org.eventb.core.type="ℙ(LIFTS×ℤ)"/>
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directiony)" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directiony" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directiony)" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directiony" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_states(lift)=MOVING" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="0≤lift_current_floor(lift)+{UP ↦ 1,DOWN ↦ −1}(lift_movement_directions(lift))" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TOP_FLOOR≥lift_current_floor(lift)+{UP ↦ 1,DOWN ↦ −1}(lift_movement_directions(lift))" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#\/|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directionylifv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directiony)" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_directionylifv" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directiony)" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧LIFT_OF_DOOR(lift_door)=lift⇒lift_door_states(lift_door)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directiony" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylifv" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directiony" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_directionylifv" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧LIFT_OF_FLOOR_DOOR(floor_door)=lift⇒floor_door_states(floor_door)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt;|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionz" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_directionz" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFTS"/>
 <org.eventb.core.poIdentifier name="lift_movement_directions'" org.eventb.core.type="ℙ(LIFTS×LIFT_DIRECTIONS)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionz" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionz" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_directionz" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_directionz" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift∈LIFTS" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#0|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="open_lift_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_lift_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{'"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_lift_door/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_lift_door/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_door∈dom(LIFT_OF_DOOR)∧LIFT_OF_DOOR∈LIFT_DOORS ⇸ LIFTS∧LIFT_OF_DOOR(lift_door)∈dom(lift_states)∧lift_states∈LIFTS ⇸ LIFT_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_lift_door/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_lift_door/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_door_states{lift_door ↦ OPENED}∈LIFT_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/"/>
@@ -293,7 +293,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#open_lift_door\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_lift_door/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_lift_door/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction{"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door0⦂LIFT_DOORS·lift_door0∈LIFT_DOORS∧(lift_door_states{lift_door ↦ OPENED})(lift_door0)=OPENED⇒lift_states(LIFT_OF_DOOR(lift_door0))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/"/>
@@ -301,26 +301,26 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#open_lift_door\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_door_states'" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="lift_door" org.eventb.core.type="LIFT_DOORS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction{'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction{" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction{'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction{" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_door∈LIFT_DOORS" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction{(" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{'" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction{(" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{'" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_door_states(lift_door)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{(" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction{" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction{(" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift_states(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="close_lift_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="close_lift_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction\|'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_door∈dom(lift_door_states)∧lift_door_states∈LIFT_DOORS ⇸ DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction\|'"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="close_lift_door/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="159">
+<org.eventb.core.poSequent name="close_lift_door/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift_door_states{lift_door ↦ CLOSED}∈LIFT_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1"/>
@@ -328,7 +328,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#close_lift_door\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="close_lift_door/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="159">
+<org.eventb.core.poSequent name="close_lift_door/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction\|"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift_door0⦂LIFT_DOORS·lift_door0∈LIFT_DOORS∧(lift_door_states{lift_door ↦ CLOSED})(lift_door0)=OPENED⇒lift_states(LIFT_OF_DOOR(lift_door0))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1"/>
@@ -336,35 +336,35 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#close_lift_door\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction|" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction|" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="lift_door_states'" org.eventb.core.type="ℙ(LIFT_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="lift_door" org.eventb.core.type="LIFT_DOORS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction|'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction\|" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction|'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction\|" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_door∈LIFT_DOORS" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction|" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction\|'" org.eventb.core.poStamp="159">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction|" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction\|'" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="lift_door_states(lift_door)=OPENED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="open_floor_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_floor_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}'"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_floor_door/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_floor_door/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_door∈dom(LIFT_OF_FLOOR_DOOR)∧LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFTS∧LIFT_OF_FLOOR_DOOR(floor_door)∈dom(lift_current_floor)∧lift_current_floor∈LIFTS ⇸ ℤ∧floor_door∈dom(FLOOR_OF_DOOR)∧FLOOR_OF_DOOR∈FLOOR_DOORS ⇸ ℤ" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#\/"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_floor_door/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_floor_door/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction})"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_door∈dom(LIFT_OF_FLOOR_DOOR)∧LIFT_OF_FLOOR_DOOR∈FLOOR_DOORS ⇸ LIFTS∧LIFT_OF_FLOOR_DOOR(floor_door)∈dom(lift_states)∧lift_states∈LIFTS ⇸ LIFT_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction})"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_floor_door/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_floor_door/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_door_states{floor_door ↦ OPENED}∈FLOOR_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2"/>
@@ -372,7 +372,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#open_floor_door\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="open_floor_door/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="open_floor_door/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door0⦂FLOOR_DOORS·floor_door0∈FLOOR_DOORS∧(floor_door_states{floor_door ↦ OPENED})(floor_door0)=OPENED⇒FLOOR_OF_DOOR(floor_door0)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door0))∧lift_states(LIFT_OF_FLOOR_DOOR(floor_door0))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2"/>
@@ -380,29 +380,29 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#open_floor_door\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="floor_door_states'" org.eventb.core.type="ℙ(FLOOR_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="floor_door" org.eventb.core.type="FLOOR_DOORS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction}'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction}" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction}'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction}" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor_door∈FLOOR_DOORS" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction}(" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}'" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction}(" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}'" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floor_door_states(floor_door)=CLOSED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction})" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}(" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction})" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction}(" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))=FLOOR_OF_DOOR(floor_door)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#\/"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction})" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction}" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction})" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="lift_states(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt2|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="close_floor_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="close_floor_door/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction~'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_door∈dom(floor_door_states)∧floor_door_states∈FLOOR_DOORS ⇸ DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt4|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt4|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction~'"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="close_floor_door/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="close_floor_door/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction~"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floor_door_states{floor_door ↦ CLOSED}∈FLOOR_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt4"/>
@@ -410,7 +410,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#close_floor_door\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="close_floor_door/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="154">
+<org.eventb.core.poSequent name="close_floor_door/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPlift_movement_direction~"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor_door0⦂FLOOR_DOORS·floor_door0∈FLOOR_DOORS∧(floor_door_states{floor_door ↦ CLOSED})(floor_door0)=OPENED⇒FLOOR_OF_DOOR(floor_door0)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door0))∧lift_states(LIFT_OF_FLOOR_DOOR(floor_door0))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt4"/>
@@ -418,24 +418,24 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#close_floor_door\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction~" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTIDENTlift_movement_direction~" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poIdentifier name="floor_door_states'" org.eventb.core.type="ℙ(FLOOR_DOORS×DOOR_STATES)"/>
 <org.eventb.core.poIdentifier name="floor_door" org.eventb.core.type="FLOOR_DOORS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction~'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction~" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTHYPlift_movement_direction~'" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTIDENTlift_movement_direction~" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floor_door∈FLOOR_DOORS" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt4|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction~" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction~'" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="EVTALLHYPlift_movement_direction~" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTHYPlift_movement_direction~'" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floor_door_states(floor_door)=OPENED" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.event#evt4|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPBaseLiftContexy" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="HYPBaseLiftContexy" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift_door_states∈LIFT_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floor_door_states∈FLOOR_DOORS → DOOR_STATES" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="HYPBaseLiftContexz" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="HYPBaseLiftContexz" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexy" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀lift_door⦂LIFT_DOORS·lift_door∈LIFT_DOORS∧lift_door_states(lift_door)=OPENED⇒lift_states(LIFT_OF_DOOR(lift_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz" org.eventb.core.poStamp="154">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContexz" org.eventb.core.poStamp="161">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀floor_door⦂FLOOR_DOORS·floor_door∈FLOOR_DOORS∧floor_door_states(floor_door)=OPENED⇒FLOOR_OF_DOOR(floor_door)=lift_current_floor(LIFT_OF_FLOOR_DOOR(floor_door))∧lift_states(LIFT_OF_FLOOR_DOOR(floor_door))≠MOVING" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt?"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

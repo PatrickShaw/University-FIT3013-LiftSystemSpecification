@@ -8,7 +8,6 @@
 <org.eventb.core.action name="+" org.eventb.core.assignment="total_times_floor_doors_opened ≔ 0" org.eventb.core.label="act16"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="total_times_floor_doors_opened_per_floor ≔ FLOORS × {0}" org.eventb.core.label="act17"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="total_times_floor_door_opened ≔ LIFTS × {FLOORS × {0}}" org.eventb.core.label="act18"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="total_times_floor_door_opened ≔ 0" org.eventb.core.label="act19"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name=")" org.eventb.core.target="DoorsContext"/>
 <org.eventb.core.refinesMachine name="*" org.eventb.core.target="BaseLiftMachine"/>

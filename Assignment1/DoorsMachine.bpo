@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="53">
+<org.eventb.core.poFile org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="39">
 <org.eventb.core.poIdentifier name="LIFTS" org.eventb.core.type="ℙ(LIFTS)"/>
 <org.eventb.core.poIdentifier name="LIFT_DIRECTIONS" org.eventb.core.type="ℙ(LIFT_DIRECTIONS)"/>
@@ -64,7 +64,7 @@
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContex\|"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFTS × {DOOR_SIDES × {CLOSED}}∈LIFTS → (DOOR_SIDES → DOOR_STATES)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -73,7 +73,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContex{|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFTS × {FLOORS × {DOOR_SIDES × {CLOSED}}}∈LIFTS → (FLOORS → (DOOR_SIDES → DOOR_STATES))" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -82,7 +82,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContex{|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀lift⦂LIFTS·lift∈LIFTS⇒(∀side⦂DOOR_SIDES·side∈DOOR_SIDES∧(LIFTS × {FLOORS × {DOOR_SIDES × {CLOSED}}})(lift)((LIFTS × {0})(lift))(side)=OPENED⇒(LIFTS × {DOOR_SIDES × {CLOSED}})(lift)(side)=OPENED)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt5"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -91,7 +91,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#HYPBaseLiftContex\||org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀floor⦂ℤ·floor∈FLOORS⇒(∀lift⦂LIFTS·lift∈LIFTS⇒(∃side⦂DOOR_SIDES·side∈DOOR_SIDES∧IS_DISABLED_DOOR(lift)(floor)(side)=FALSE))" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evt&gt;"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -100,7 +100,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evtH"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -109,7 +109,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFTS × {0}∈LIFTS → ℕ" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evtI"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -118,7 +118,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evtJ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -127,7 +127,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FLOORS × {0}∈FLOORS → ℕ" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evtK"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
@@ -136,7 +136,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="53">
+<org.eventb.core.poSequent name="INITIALISATION/inv10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Assignment1/DoorsMachine.bpo|org.eventb.core.poFile#DoorsMachine|org.eventb.core.poPredicateSet#EVTALLHYPtotal_times_floor_doors_opened_per_floos"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFTS × {FLOORS × {0}}∈LIFTS → (FLOORS → ℕ)" org.eventb.core.source="/Assignment1/DoorsMachine.bum|org.eventb.core.machineFile#DoorsMachine|org.eventb.core.invariant#evtM"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Assignment1/BaseLiftMachine.bum|org.eventb.core.machineFile#BaseLiftMachine|org.eventb.core.event#'"/>
